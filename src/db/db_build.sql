@@ -20,7 +20,7 @@ CREATE TABLE teams (
   genders VARCHAR(100),
   ages INTEGER,
   skill TEXT,
-  sport TEXT, 
+  sport TEXT,
   solo TEXT
 );
 
@@ -33,14 +33,12 @@ CREATE TABLE events (
   open TEXT NOT NULL
 );
 
-
 INSERT INTO users (location, name, password, email) VALUES
-(
-  'Tufnell Park',
-  'Sasspants_sally', 
-  'password',
-  'grahlsan@gmail.com'
-);
+(  'Tufnell Park',  'Sasspants_sally',   'password',  'grahlsan@gmail.com');
+
+INSERT INTO teams (location, size, genders, ages, skill, sport, solo) VALUES
+(  'london',  '11',   'male',  '21',  'high',  'football',  'true');
+
 
 
 COMMIT;
