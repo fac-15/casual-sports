@@ -16,7 +16,7 @@ h2 {
     overflow: hidden;
   }
     .topnav a {
-    float: left;
+    float: right;
     display: block;
     color: #000000;
     text-align: center;
