@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS users, teams, events CASCADE;
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   location TEXT,
-  team_id INTEGER REFERENCES teams(id),
+  -- team_id INTEGER REFERENCES teams(id),
   name VARCHAR(100) NOT NULL,
   password VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
@@ -21,12 +21,12 @@ CREATE TABLE teams (
   ages INTEGER,
   skill TEXT,
   sport TEXT, 
-  join TEXT
+  solo TEXT
 );
 
 CREATE TABLE events (
   id SERIAL PRIMARY KEY,
-  team_id INTEGER REFERENCES teams(id),
+  -- team_id INTEGER REFERENCES teams(id),
   user_id INTEGER REFERENCES users(id),
   location TEXT NOT NULL,
   genders TEXT NOT NULL,

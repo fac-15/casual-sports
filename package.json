@@ -35,8 +35,10 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
     "pg": "^7.8.0",
     "pg-promise": "^8.5.4",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "url": "^0.11.0"
   }
 }
