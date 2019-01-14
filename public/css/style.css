@@ -1,35 +1,118 @@
+
+h1 {
+
+  font-size: 3em;
+}
+
+h2 {
+  margin: 1em 0 0.5em 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+
 .topnav {
-    background-color: #333;
+    background-color: rgb(151, 151, 151);
     overflow: hidden;
   }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+    .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #000000;
     text-align: center;
     padding: 0.6em 0.8em;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 1em;
   }
   
-  /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
   
-  /* Add an active class to highlight the current page */
   .active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(148, 212, 150);
+    color: rgb(0, 0, 0);
   }
   
-  /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
   }
+
+/* 
+  ------------------------- form ------------------------ */
+  .form {
+    margin: 0 auto;
+    max-width: 20em;
+    padding: 2em 1em 1em 2em;
+  }
+
+  .form label {
+    margin: 0.4em 0 0.2em 0;
+    padding: 0.4em;
+    display: block;
+    font-weight: bold;
+    font-family: "Syncopate", sans-serif;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+  }
+
+  .form input[type="text"],
+  .form input[type="password"],
+textarea {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 0.2em solid #379683;
+  padding: 0.8em;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form textarea:focus {
+  -moz-box-shadow: 0 0 0.8em #c94b3a;
+  -webkit-box-shadow: 0 0 0.8em #c94b3a;
+  box-shadow: 0 0 0.8em #c94b3a;
+  border: 0.2em solid #c94b3a;
+}
+
+.form {
+  width: 49%;
+}
+
+.form .field-long {
+  width: 100%;
+}
+
+.form .field-textarea {
+  height: 100px;
+}
+
+.button-submit {
+  background: #32553f;
+  margin: 0.4em;
+  padding: 0.6em;
+  text-align: center;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  color: #cad8e6;
+}
+
+.button-submit :hover {
+  background: #4691a4;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/* ---------------- media queries --------------- */
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
@@ -53,3 +136,4 @@
       text-align: left;
     }
   }
+
