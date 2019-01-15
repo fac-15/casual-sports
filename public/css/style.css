@@ -135,6 +135,19 @@ textarea {
   -webkit-box-shadow: none;
 }
 
+/* --------------------events page-------------------- */
+
+.read-event {
+  text-align: center;
+}
+
+/* --------------------teams page-------------------- */
+
+.read-team {
+  text-align: center;
+}
+
+
 /* ---------------- media queries --------------- */
 
 @media screen and (max-width: 600px) {

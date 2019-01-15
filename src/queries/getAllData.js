@@ -1,6 +1,6 @@
 const dbConnection = require('../db/db_connection.js');
 
-const getAllData = () => {
+const getEventData = () => {
     return new Promise((resolve, reject) => {
         dbConnection.query(`SELECT * FROM events`, (err, res) => {
           if (err) reject(err);
@@ -9,4 +9,19 @@ const getAllData = () => {
       });
     }
 
-module.exports = getAllData;
+
+    const getAllTeams = () => {
+      return new Promise((resolve, reject) => {
+          dbConnection.query(`SELECT * FROM teams`, (err, res) => {
+            if (err) reject(err);
+            else resolve(res.rows);
+          });
+        });
+      }
+  
+      
+
+module.exports = {
+  getEventData,
+  getAllTeams 
+};

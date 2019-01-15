@@ -7,7 +7,7 @@ const getAllData = require('../queries/getAllData')
 
 router.get("/", (request, response) => {
 
-  getAllData()
+  getAllData.getEventData()
   .then((result) => {
   response.render("home", {eventData: result})
   })
@@ -17,7 +17,17 @@ router.get("/", (request, response) => {
 })
 
 router.get('/ev', (request, response) => {
-  getAllData()
+  getAllData.getEventData()
+  .then((result) => {
+    response.json(result)
+    })
+    .catch((err)=> {
+      response.status(err, 500);
+    })
+});
+
+router.get('/tms', (request, response) => {
+  getAllData.getAllTeams()
   .then((result) => {
     response.json(result)
     })
@@ -28,6 +38,10 @@ router.get('/ev', (request, response) => {
 
 router.get("/events/:id", (req, res) => {
   res.render("events");
+});
+
+router.get("/teams/:id", (req, res) => {
+  res.render("teams");
 });
 
 router.get("/sign-up", (req, res) => {
