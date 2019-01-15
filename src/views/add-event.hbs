@@ -10,13 +10,14 @@
                 <label for="location">Location</label><input pattern="^[^<>]+$" name='location' type='text' id="location"
                     class="field-long" placeholder="Type the location (post code)" required />
                 <label class="gender-span">Gender:
-                    <label class="gender" for="male">Male<input type="radio" id="male" name="gender" value="male"></label>
-                    <label class="gender" for="female">Female<input type="radio" id="female" name="gender" value="female"></label>
-                    <label class="gender" for="mixed">Mixed<input type="radio" id="mixed" name="gender" value="mixed"></label>
+                    <label class="gender" for="mixed">Mixed<input type="radio" id="mixed" name="gender" value="1"
+                            checked></label>
+                    <label class="gender" for="male">Male<input type="radio" id="male" name="gender" value="2"></label>
+                    <label class="gender" for="female">Female<input type="radio" id="female" name="gender" value="3"></label>
                 </label>
                 <label class="solo-span">Is this an open event?
-                    <label class="solo" for="yes">Yes<input type="radio" id="yes" name="gender" value="male"></label>
-                    <label class="solo" for="no">No<input type="radio" id="no" name="gender" value="female"></label>
+                    <label class="solo" for="yes">Yes<input type="radio" id="yes" name="open" value="true" checked></label>
+                    <label class="solo" for="no">No<input type="radio" id="no" name="open" value="false"></label>
                 </label>
                 <p>What's an open event?</p>
                 <p>An open event means that attendees don't need to register or join your team. Anyone can just
