@@ -1,0 +1,34 @@
+<main class="page-content add-team">
+    <section id="add-team" title="add-team">
+        <form action='/add-team' method='POST'>
+            <h2>Register your Team</h2>
+            <ul class="form" id="add-event-form">
+                <label for="name-of-event">Team Name</label><input pattern="^[^<>]+$" name='name' type='text' id="name-of-event"
+                    class="field-long" placeholder="Name of your team" required />
+                <label for="sport"> Preferred Sport</label><input pattern="^[^<>]+$" name='sport' type='text' id="sport" class="field-long"
+                    placeholder="Your preferred sport" required />
+                <label for="location">Location</label><input pattern="^[^<>]+$" name='location' type='text' id="location"
+                    class="field-long" placeholder="Your preferred location (if you have one)" required />
+                        <label for="age-options">Age Range</label>
+                                <select id="age-options">
+                                  <option value="18-21">18-21</option>
+                                  <option value="22-40">22-40</option>
+                                  <option value="41-65">41-65</option>
+                                  <option value="66 and over">66 and over</option>
+                                </select>
+                <label class="gender-span">Gender<br>
+                    <label class="gender" for="mixed">Mixed<input type="radio" id="mixed" name="gender" value="1"
+                            checked></label>
+                    <label class="gender" for="male">All-Male<input type="radio" id="male" name="gender" value="2"></label>
+                    <label class="gender" for="female">All-Female<input type="radio" id="female" name="gender" value="3"></label>
+                    <label class="gender" for="other">Other<input type="radio" id="female" name="gender" value="4"></label>
+                </label>
+                <label class="solo-span">Looking for more members?<br>
+                    <label class="solo" for="yes">Yes<input type="radio" id="yes" name="open" value="true" checked></label>
+                    <label class="solo" for="no">Not right now<input type="radio" id="no" name="open" value="false"></label>
+                </label>
+                <button type="submit" class="button-submit">Add your Team!</button>
+            </ul>
+        </form>
+    </section>
+</main>
