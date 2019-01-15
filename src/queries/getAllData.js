@@ -1,6 +1,6 @@
 const dbConnection = require('../db/db_connection.js');
 
-const getAllEventData = events => {
+const getAllData = () => {
     return new Promise((resolve, reject) => {
         dbConnection.query(`SELECT * FROM events`, (err, res) => {
           if (err) reject(err);
@@ -9,4 +9,4 @@ const getAllEventData = events => {
       });
     }
 
-module.exports = getAllEventData;
+module.exports = getAllData;
