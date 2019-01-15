@@ -4,41 +4,42 @@ DROP TABLE IF EXISTS users, teams, events CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  location TEXT,
-  -- team_id INTEGER REFERENCES teams(id),
-  name VARCHAR(100) NOT NULL,
-  password VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  contact_number INTEGER
+  team_id Text,
+  username VARCHAR(20) NOT NULL UNIQUE,
+  password VARCHAR(20) NOT NULL,
+  email VARCHAR(30) NOT NULL UNIQUE,
 );
 
 CREATE TABLE teams (
   id SERIAL PRIMARY KEY,
+  name Text
   location TEXT,
   user_id INTEGER REFERENCES users(id),
   size INTEGER,
-  genders VARCHAR(100),
+  genders INTEGER,
   ages INTEGER,
-  skill TEXT,
+  skill INTEGER,
   sport TEXT,
-  solo TEXT
+  solo  BOOLEAN NOT NULL DEFAULT false
 );
 
 CREATE TABLE events (
   id SERIAL PRIMARY KEY,
-  -- team_id INTEGER REFERENCES teams(id),
-  user_id INTEGER REFERENCES users(id),
+  name TEXT,
+  users_id INTERGER REFERENCES users(id),
   location TEXT NOT NULL,
-  genders TEXT NOT NULL,
-  open TEXT NOT NULL
+  genders INTEGER,
+  open BOOLEAN NOT NULL DEFAULT false
 );
 
-INSERT INTO users (location, name, password, email) VALUES
-(  'Tufnell Park',  'Sasspants_sally',   'password',  'grahlsan@gmail.com');
+INSERT INTO users (team_id, username, password, email) VALUES
+(  ,  'Sasspants_sally',   'password',  'grahlsan@gmail.com');
+('footy',  'charlie', 'ilovefootball', 'charlie@gmail.com');
 
-INSERT INTO teams (location, size, genders, ages, skill, sport, solo) VALUES
-(  'london',  '11',   'male',  '21',  'high',  'football',  'true');
+INSERT INTO teams (name, location, user_id, size, genders, ages, skill, sport, solo) VALUES
+('fac',  'london',  '1',   '1', '3', '1', 'high',  'football',  'true');
 
-
+INSERT INTO events(name, users_id, location, genders, open) VALUES
+('fun at the park', '1', 'london', '3', true );
 
 COMMIT;
