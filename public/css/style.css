@@ -40,20 +40,21 @@ h2 {
 .main-gif {
   margin: 0 auto;
   display: block;
-  max-width: 70%;
+  max-width: 20%;
+  display: inline;
 }
 
-/* 
+/*
   ------------------------- form ------------------------ */
 
 /* Home search styling  */
 
 #home-form {
-  max-width: 50%;
+  max-width: 25em;
 }
 
 #home-form input {
-  width: 80%;
+  width: 70%;
 }
 
 #search-events,
