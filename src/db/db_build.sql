@@ -26,6 +26,7 @@ CREATE TABLE teams (
 CREATE TABLE events (
   id SERIAL PRIMARY KEY,
   name TEXT,
+  sport TEXT,
   users_id INTEGER REFERENCES users(id),
   location TEXT NOT NULL,
   genders INTEGER,
@@ -40,6 +41,6 @@ INSERT INTO teams (name, location, user_id, size, genders, ages, skill, sport, s
 ('fac',  'london',  '1',   '1', '3', '1', '3',  'football',  'true');
 
 INSERT INTO events(name, users_id, location, genders, open) VALUES
-('fun at the park', '1', 'london', '3', true );
+('fun at the park','Football', '1', 'london', '3', true );
 
 COMMIT;
