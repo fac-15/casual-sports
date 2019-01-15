@@ -40,6 +40,7 @@ INSERT INTO teams (name, location, user_id, size, genders, ages, skill, sport, s
 ('fac',  'london',  '1',   '1', '3', '1', '3',  'football',  'true');
 
 INSERT INTO events(name, users_id, location, genders, open) VALUES
-('fun at the park', '1', 'london', '3', true );
+('fun at the park', '1', 'london', '3', true ),
+('angry football', '2', 'Tufnell Park', '2', true );
 
 COMMIT;

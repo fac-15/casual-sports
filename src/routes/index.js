@@ -16,6 +16,20 @@ router.get("/", (request, response) => {
    })
 })
 
+router.get('/ev', (request, response) => {
+  getAllData()
+  .then((result) => {
+    response.json(result)
+    })
+    .catch((err)=> {
+      response.status(err, 500);
+    })
+});
+
+router.get("/events/:id", (req, res) => {
+  res.render("events");
+});
+
 router.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
