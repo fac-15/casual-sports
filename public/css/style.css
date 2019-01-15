@@ -44,8 +44,19 @@ h2 {
   display: inline;
 }
 
-/*
-  ------------------------- form ------------------------ */
+/*------------------------- form ------------------------ */
+
+/* add event form */
+
+.gender-span .gender,
+.solo-span .solo {
+  display: inline-block;
+  font-weight: normal;
+}
+
+.gender-span {
+  display: block;
+}
 
 /* Home search styling  */
 

@@ -1,0 +1,29 @@
+<main class="page-content add-event">
+    <section id="add-event" title="add-event">
+        <form action='/add-event' method='POST'>
+            <h2>Add Event</h2>
+            <ul class="form" id="add-event-form">
+                <label for="name-of-event">Name</label><input pattern="^[^<>]+$" name='name' type='text' id="name-of-event"
+                    class="field-long" placeholder="Type the name of the event" required />
+                <label for="sport">Sport</label><input pattern="^[^<>]+$" name='sport' type='text' id="sport" class="field-long"
+                    placeholder="Type the name of the sport" required />
+                <label for="location">Location</label><input pattern="^[^<>]+$" name='location' type='text' id="location"
+                    class="field-long" placeholder="Type the location (post code)" required />
+                <label class="gender-span">Gender:
+                    <label class="gender" for="male">Male<input type="radio" id="male" name="gender" value="male"></label>
+                    <label class="gender" for="female">Female<input type="radio" id="female" name="gender" value="female"></label>
+                    <label class="gender" for="mixed">Mixed<input type="radio" id="mixed" name="gender" value="mixed"></label>
+                </label>
+                <label class="solo-span">Is this an open event?
+                    <label class="solo" for="yes">Yes<input type="radio" id="yes" name="gender" value="male"></label>
+                    <label class="solo" for="no">No<input type="radio" id="no" name="gender" value="female"></label>
+                </label>
+                <p>What's an open event?</p>
+                <p>An open event means that attendees don't need to register or join your team. Anyone can just
+                    turn
+                    up.</p>
+                <button type="submit" class="button-submit">Add Event</button>
+            </ul>
+        </form>
+    </section>
+</main>

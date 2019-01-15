@@ -11,6 +11,11 @@ router.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
 
+
+router.get("/add-event", (req, res) => {
+  res.render("add-event");
+});
+
 router.get("/login", (req, res) => {
     res.render("login"); 
   });
