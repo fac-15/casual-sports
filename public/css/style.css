@@ -77,7 +77,7 @@ h2 {
 
 .form {
   margin: 0 auto;
-  max-width: 20em;
+  max-width: 25em;
   padding: 2em 1em 1em 2em;
 }
 
@@ -92,6 +92,7 @@ h2 {
 }
 
 .form input[type="text"],
+#age-options,
 .form input[type="password"],
 textarea {
   box-sizing: border-box;
