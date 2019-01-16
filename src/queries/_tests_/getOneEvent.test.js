@@ -8,14 +8,15 @@ const funAtThePark = [ { id: 1,
     genders: 3,
     open: true } ];
 
-const error = "error: invalid input syntax for integer: \"potatoes\"";
+// const error = "error: invalid input syntax for integer: \"potatoes\"";
 
 test('the function returns the data in the event with the id of 1', () => {
     expect.assertions(1);
     return expect(getOneEvent(1)).resolves.toEqual(funAtThePark);
   });
   
-  test('the fetch fails with an error', () => {
-    expect.assertions(1);
-    return expect(getOneEvent("potatoes")).rejects.toMatch(error);
+  test('the function fails with an error', () => {
+    expect.assertions();
+    const msg = 'OMG EXPLOSIONS';
+    return getOneEvent(new Error).catch(Error => expect(getOneEvent(msg)).rejects.toThrow(msg));
   });

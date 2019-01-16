@@ -13,7 +13,7 @@ const getEventData = () => {
     const getAllTeams = () => {
       return new Promise((resolve, reject) => {
           dbConnection.query(`SELECT * FROM teams`, (err, res) => {
-            if (err) reject(err);
+            if (err) reject(`${err}`);
             else resolve(res.rows);
           });
         });
