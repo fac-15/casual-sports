@@ -8,7 +8,7 @@ test('the function returns all of the event data', () => {
     expect.assertions(1);
     return expect(getAllData.getEventData()).resolves.toEqual(events);
   });
-  
+
   test('the function fails with an error', () => {
     expect.assertions();
     const msg = 'OMG EXPLOSIONS';
@@ -20,7 +20,7 @@ test('the function returns all of the team data', () => {
     expect.assertions(1);
     return expect(getAllData.getAllTeams()).resolves.toEqual(teams);
   });
-  
+
   test('the function fails with an error', () => {
     expect.assertions();
     const msg = 'OMG EXPLOSIONS';

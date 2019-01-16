@@ -14,7 +14,7 @@ test('the function returns the data in the event with the id of 1', () => {
     expect.assertions(1);
     return expect(getOneEvent(1)).resolves.toEqual(funAtThePark);
   });
-  
+
   test('the function fails with an error', () => {
     expect.assertions();
     const msg = 'OMG EXPLOSIONS';
