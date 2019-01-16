@@ -7,7 +7,6 @@ const getOneTeam = require('../queries/getOneTeam');
 
 
 router.get("/", (request, response) => {
-
   getAllData.getEventData()
   .then((result) => {
   response.render("home", {eventData: result})
@@ -48,7 +47,6 @@ router.get("/teams/:id", (req, res) => {
 router.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
-
 
 router.get("/add-event", (req, res) => {
   res.render("add-event");

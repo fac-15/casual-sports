@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage && NODE_ENV=test",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
