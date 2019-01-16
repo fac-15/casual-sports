@@ -1,3 +1,4 @@
+
 <section id="search-home" title="search-home">
     <form action='/search-home' method='GET'>
         <ul class="form" id="home-form">
@@ -15,5 +16,11 @@
             <button type="submit" id="home-submit" class="button-submit">Search</button>
         </ul>
     </form>
+
+             <ul class="event-list">
+            {{#each eventData}}
+            <li><a class="read-more" href="/events/{{id}}"><h2>{{name}}</h2></a></li>
+            {{/each}}
+        </ul>
     <img class="main-gif" src="https://media.giphy.com/media/t58dlbfM3LabS/giphy.gif" alt="Man cheering for sport">
 </section>

@@ -1,6 +1,6 @@
 h1 {
   display: inline-block;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 h2 {
@@ -13,6 +13,7 @@ h2 {
   background-color: rgb(151, 151, 151);
   overflow: hidden;
 }
+
 .topnav a {
   float: right;
   display: block;
@@ -146,6 +147,19 @@ textarea {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
+
+/* --------------------events page-------------------- */
+
+.read-event {
+  text-align: center;
+}
+
+/* --------------------teams page-------------------- */
+
+.read-team {
+  text-align: center;
+}
+
 
 /* ---------------- media queries --------------- */
 
