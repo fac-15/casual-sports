@@ -1,13 +1,11 @@
-const dbConnection = require('../db/db_connection.js');
+const dbConnection = require("../db/db_connection.js");
 
-
-const getOneTeam = id => {
-    return new Promise((resolve, reject) => {
-      dbConnection.query(`SELECT * FROM teams WHERE id = '${id}'`, (err, res) => {
-        if (err) reject(err);
-        else resolve(res.rows);
-      });
+const getOneTeam = id =>
+  new Promise((resolve, reject) => {
+    dbConnection.query(`SELECT * FROM teams WHERE id = '${id}'`, (err, res) => {
+      if (err) reject(`${err}`);
+      else resolve(res.rows[0]);
     });
-  }
+  });
 
-  module.exports = getOneTeam;
+module.exports = getOneTeam;
