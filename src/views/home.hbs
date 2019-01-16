@@ -2,8 +2,17 @@
 <section id="search-home" title="search-home">
     <form action='/search-home' method='GET'>
         <ul class="form" id="home-form">
-            <label for="search-events">Search events</label><input pattern="^[^<>]+$" name='search-events' type='text'
-                id="search-events" class="field-long" placeholder="Type a sport here" required />
+            <label for="search-events">Search events</label>
+            <input pattern="^[^<>]+$" name='search-events' type='text'
+                id="search-events" list="sport" class="field-long" placeholder="Type a sport here" required />
+                <datalist id="sport">
+                  <option value="chess">
+                    <option value="checkers">
+                    <option value="volleyball">
+                      <option value="water polo">
+            <option value="rugby">
+            <option value="football">
+        </datalist>
             <button type="submit" id="home-submit" class="button-submit">Search</button>
         </ul>
     </form>

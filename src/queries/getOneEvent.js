@@ -10,14 +10,4 @@ const getOneEvent = id => {
     });
   }
 
-
-  // getOneEvent("potatoes")
-  // .then((result) => {
-  //   console.log("this is the result", result)
-  // })
-  // .catch((err)=> {
-  //   console.log(err, 500);
-  //  })
-
-
   module.exports = getOneEvent;

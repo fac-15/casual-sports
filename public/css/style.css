@@ -45,8 +45,19 @@ h2 {
   display: inline;
 }
 
-/*
-  ------------------------- form ------------------------ */
+/*------------------------- form ------------------------ */
+
+/* add event form */
+
+.gender-span .gender,
+.solo-span .solo {
+  display: inline-block;
+  font-weight: normal;
+}
+
+.gender-span {
+  display: block;
+}
 
 /* Home search styling  */
 
@@ -67,7 +78,7 @@ h2 {
 
 .form {
   margin: 0 auto;
-  max-width: 20em;
+  max-width: 25em;
   padding: 2em 1em 1em 2em;
 }
 
@@ -82,6 +93,7 @@ h2 {
 }
 
 .form input[type="text"],
+#age-options,
 .form input[type="password"],
 textarea {
   box-sizing: border-box;
