@@ -16,6 +16,28 @@ router.get("/", (request, response) => {
     });
 });
 
+router.get("/events", (request, response) => {
+  getAllData
+    .getTableData("events")
+    .then(result => {
+      response.render("events", { eventsData: result });
+    })
+    .catch(err => {
+      response.status(err, 500);
+    });
+});
+
+router.get("/teams", (request, response) => {
+  getAllData
+    .getTableData("teams")
+    .then(result => {
+      response.render("teams", { teamsData: result });
+    })
+    .catch(err => {
+      response.status(err, 500);
+    });
+});
+
 router.get("/ev", (request, response) => {
   getAllData
     .getTableData("events")
