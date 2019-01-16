@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 // const helpers = require('../views/helpers/index.js');
 // const reset = require('../database/build_test.js');
-const getAllData = require('../queries/getAllData')
+const getAllData = require('../queries/getAllData');
+const getOneTeam = require('../queries/getOneTeam');
 
 
 router.get("/", (request, response) => {
