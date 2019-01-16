@@ -13,7 +13,7 @@ const funAtThePark = [
   }
 ];
 
-const error = 'error: invalid input syntax for integer: "potatoes"';
+// const error = "error: invalid input syntax for integer: \"potatoes\"";
 
 test("the function returns the data in the event with the id of 1", () => {
   dbBuild(function(error, response) {
