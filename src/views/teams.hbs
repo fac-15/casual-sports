@@ -1,5 +1,11 @@
 <main class="page-content teams">
     <section class="team" id="team">
-
+        <ul class="event-list">
+            {{#each teamsData}}
+            <li><a class="read-more" href="/teams/{{id}}">
+                    <h2>{{name}}</h2>
+                </a></li>
+            {{/each}}
+        </ul>
     </section>
 </main>
