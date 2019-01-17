@@ -65,7 +65,13 @@ router.get("/events/:id", (req, res) => {
 });
 
 router.get("/teams/:id", (req, res) => {
-  res.render("teams");
+  getOneTeam(req.params.id)
+  .then(result => {
+    res.render("team-info", { teamData: result });
+  })
+  .catch(err => {
+    res.status(err, 500);
+  });
 });
 
 router.get("/sign-up", (req, res) => {
