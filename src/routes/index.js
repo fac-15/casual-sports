@@ -16,7 +16,11 @@ router.get("/search/:table/:sport", (request, response) => {
   getAllData
     .searchSport(table, searchInput)
     .then(result => {
-      response.render("search", { sportsData: result });
+      if (table === events) {
+      response.render("search", { sportsData: result });}
+      else {
+        response.render("search", { teamData: result });}
+      }
     })
     .catch(err => {
       response.status(err, 500);
@@ -56,18 +60,19 @@ router.get("/events/:id", (req, res) => {
     });
 });
 
-router.get("/new-event", (req, res) => {
-  res.render("new-event", { eventInfo: "this" });
-});
-
 router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
     .then(result => {
-      res.render("team-info", { teamData: result });
+      let rest = result[0];
+      res.render("team-info", { teamInfo: rest });
     })
     .catch(err => {
       res.status(err, 500);
     });
+});
+
+router.get("/new-event", (req, res) => {
+  res.render("new-event", { eventInfo: "this" });
 });
 
 router.get("/sign-up", (req, res) => {

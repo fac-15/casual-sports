@@ -4,6 +4,7 @@ const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const helpers = require("./views/helpers/index");
 const postEventData = require("./queries/postEventData");
+const postTeamData = require("./queries/postTeamData");
 
 const routes = require("./routes/index.js");
 
@@ -35,6 +36,13 @@ app.post("/search", (req, res) => {
 app.post("/add-event", (req, res) => {
   const newEvent = req.body;
   postEventData.postEvent(newEvent);
+  res.redirect(`/`);
+});
+
+app.post("/add-team", (req, res) => {
+  const newTeam = req.body;
+  console.log(newTeam);
+  postTeamData.postTeam(newTeam);
   res.redirect(`/`);
 });
 
