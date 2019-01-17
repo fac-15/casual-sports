@@ -4,12 +4,32 @@ const router = express.Router();
 // const reset = require('../database/build_test.js');
 const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
+const getOneEvent = require("../queries/getOneEvent");
 
 router.get("/", (request, response) => {
-  getAllData
-    .getTableData("events")
+  response.render("home");
+});
+
+router.get("/search-open/:table/:sport", (request, response) => {
+  const searchInput = request.params.sport
+  const table = request.params.table
+getAllData
+    .searchSport(table, searchInput)
     .then(result => {
-      response.render("home", { eventData: result });
+      response.render("search-open", { sportsData: result});
+    })
+    .catch(err => {
+      response.status(err, 500);
+    });
+})
+
+router.get("/search/:table/:sport", (request, response) => {
+  const searchInput = request.params.sport;
+  const table = request.params.table;
+  getAllData
+    .searchSport(table, searchInput)
+    .then(result => {
+      response.render("search", { sportsData: result, table: table, sport: searchInput });
     })
     .catch(err => {
       response.status(err, 500);
@@ -38,34 +58,29 @@ router.get("/teams", (request, response) => {
     });
 });
 
-router.get("/ev", (request, response) => {
-  getAllData
-    .getTableData("events")
-    .then(result => {
-      response.json(result);
-    })
-    .catch(err => {
-      response.status(err, 500);
-    });
-});
-
-router.get("/tms", (request, response) => {
-  getAllData
-    .getTableData("teams")
-    .then(result => {
-      response.json(result);
-    })
-    .catch(err => {
-      response.status(err, 500);
-    });
-});
-
 router.get("/events/:id", (req, res) => {
-  res.render("events");
+  getOneEvent(req.params.id)
+    .then(result => {
+      let rest = result[0];
+      res.render("event-info", { eventInfo: rest });
+    })
+    .catch(err => {
+      res.status(err, 500);
+    });
+});
+
+router.get("/new-event", (req, res) => {
+  res.render("new-event", { eventInfo: "this" });
 });
 
 router.get("/teams/:id", (req, res) => {
-  res.render("teams");
+  getOneTeam(req.params.id)
+    .then(result => {
+      res.render("team-info", { teamData: result });
+    })
+    .catch(err => {
+      res.status(err, 500);
+    });
 });
 
 router.get("/sign-up", (req, res) => {

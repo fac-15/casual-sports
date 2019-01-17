@@ -6,8 +6,10 @@ const numToAge = (num) => {
     ageRange = "22-40";
   } else if (num === 3) {
     ageRange = "41-65";
-  } else {
+  } else if (num === 4) {
     ageRange = "66 and over";
+  } else {
+    ageRange = "Invalid input";
   }
   return ageRange;
 }

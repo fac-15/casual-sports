@@ -3,14 +3,13 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const helpers = require("./views/helpers/index");
+const postEventData = require("./queries/postEventData");
 
-
-// const helpers = require("./views/helpers/index.js");
 const routes = require("./routes/index.js");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "..", "public")));
@@ -26,6 +25,18 @@ app.engine(
     helpers: helpers
   })
 );
+
+app.post("/search", (req, res) => {
+  const table = req.body.table;
+  const searchInput = req.body.sport;
+  res.redirect(`../search/${table}/${searchInput}`);
+});
+
+app.post("/add-event", (req, res) => {
+  const newEvent = req.body;
+  postEventData.postEvent(newEvent);
+  res.redirect(`/`);
+});
 
 app.use(routes);
 app.set("port", process.env.PORT || 2500);
