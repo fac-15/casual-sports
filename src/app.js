@@ -28,8 +28,9 @@ app.engine(
 );
 
 app.post("/search",(req, res) => {
+  const table = req.body.table
   const searchInput = req.body.sport
-  res.redirect(`../search/${searchInput}`)
+  res.redirect(`../search/${table}/${searchInput}`)
   })
 
 app.use(routes);
