@@ -1,10 +1,10 @@
 <section id="search-home" title="search-home">
-    <form action='/search-home' method='GET'>
+    <form action='/search' method='POST'>
         <ul class="form" id="home-form">
             <label for="search-events"><h2>Search events</h2></label>
-            <input pattern="^[^<>]+$" name='search-events' type='text' id="search-events" list="sport" class="field-long"
+            <input name='sport' type='text' id="search-events" list="sport-list" class="field-long"
                 placeholder="Type a sport here" required />
-            <datalist id="sport">
+            <datalist name= "sport-list" id="sport-list">
                 <option value="chess">
                 <option value="checkers">
                 <option value="volleyball">
@@ -12,7 +12,7 @@
                 <option value="rugby">
                 <option value="football">
             </datalist>
-            <button type="submit" id="home-submit" class="button-submit">Search</button>
+                  <button  type="submit" id="home-submit" class="button-submit">Search</button>
         </ul>
     </form>
     <img class="main-gif" src="https://media.giphy.com/media/t58dlbfM3LabS/giphy.gif" alt="Man cheering for sport">

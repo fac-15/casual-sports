@@ -10,7 +10,7 @@ const routes = require("./routes/index.js");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "..", "public")));
@@ -26,6 +26,11 @@ app.engine(
     helpers: helpers
   })
 );
+
+app.post("/search",(req, res) => {
+  const searchInput = req.body.sport
+  res.redirect(`../search/${searchInput}`)
+  })
 
 app.use(routes);
 app.set("port", process.env.PORT || 2500);

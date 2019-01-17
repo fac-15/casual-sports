@@ -7,10 +7,15 @@ const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent")
 
 router.get("/", (request, response) => {
-  getAllData
-    .getTableData("events")
+      response.render("home");
+});
+
+router.get("/search/:sport", (request, response) => {
+  const searchInput = request.params.sport
+getAllData
+    .searchSport("events", searchInput)
     .then(result => {
-      response.render("home", { eventData: result });
+      response.render("search", { sportsData: result });
     })
     .catch(err => {
       response.status(err, 500);
