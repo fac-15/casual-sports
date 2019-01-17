@@ -1,21 +1,21 @@
-const booleanToString = require("../boolean-to-string.js")
+const { yesOrNo } = require("../index.js")
 
 test("True boolean should return Yes string", () => {
-  return expect(booleanToString(true)).toBe("Yes");
+  return expect(yesOrNo(true)).toBe("Yes");
 })
 
 test("True boolean should not return No string", () => {
-  return expect(booleanToString(true)).not.toBe("No");
+  return expect(yesOrNo(true)).not.toBe("No");
 })
 
 test("False boolean should return No string", () => {
-  return expect(booleanToString(false)).toBe("No");
+  return expect(yesOrNo(false)).toBe("No");
 })
 
 test("False boolean should not return Yes string", () => {
-  return expect(booleanToString(false)).not.toBe("Yes");
+  return expect(yesOrNo(false)).not.toBe("Yes");
 })
 
 test("Nonsense should return an error message", () => {
-  return expect(booleanToString("Halleloo")).toBe("Invalid input");
+  return expect(yesOrNo("Halleloo")).toBe("Invalid input");
 })
