@@ -4,6 +4,7 @@ const router = express.Router();
 // const reset = require('../database/build_test.js');
 const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
+const getOneEvent = require("../queries/getOneEvent")
 
 router.get("/", (request, response) => {
   getAllData
@@ -38,31 +39,17 @@ router.get("/teams", (request, response) => {
     });
 });
 
-router.get("/ev", (request, response) => {
-  getAllData
-    .getTableData("events")
-    .then(result => {
-      response.json(result);
-    })
-    .catch(err => {
-      response.status(err, 500);
-    });
-});
-
-router.get("/tms", (request, response) => {
-  getAllData
-    .getTableData("teams")
-    .then(result => {
-      response.json(result);
-    })
-    .catch(err => {
-      response.status(err, 500);
-    });
-});
-
 router.get("/events/:id", (req, res) => {
-  res.render("events");
+  getOneEvent(req.params.id)
+  .then(result => {
+    let rest = result[0];
+    res.render("event-info", { eventInfo: rest });
+  })
+  .catch(err => {
+    res.status(err, 500);
+  });
 });
+
 
 router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
