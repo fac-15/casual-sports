@@ -670,9 +670,7 @@ test("the function fails with an error", () => {
   dbBuild(function(error, response) {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     const msg = "OMG EXPLOSIONS";
-    return getAllData
-      .getTableData(new Error())
-      .catch(Error => expect().rejects.toThrow(msg));
+    return expect(getAllData.getTableData(new Error())).rejects.toThrow(msg);
   });
 });
 
@@ -688,8 +686,6 @@ test("the function fails with an error", () => {
   dbBuild(function(error, response) {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     const msg = "OMG EXPLOSIONS";
-    return getAllData
-      .getTableData(new Error())
-      .catch(Error => expect().rejects.toThrow(msg));
+    return expect(getAllData.getTableData(new Error())).rejects.toThrow(msg);
   });
 });
