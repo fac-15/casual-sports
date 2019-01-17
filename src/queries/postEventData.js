@@ -1,7 +1,7 @@
 const dbConnection = require("../db/db_connection.js");
 
-const postEvent = newEvent => {
-  return new Promise((resolve, reject) => {
+const postEvent = newEvent =>
+  new Promise((resolve, reject) => {
     const query = `INSERT INTO events (name, sport, users_id, location, genders, open) VALUES ($1, $2, $3, $4, $5, $6)`;
     const values = [
       newEvent.name,
@@ -16,6 +16,5 @@ const postEvent = newEvent => {
       else resolve(res.rows);
     });
   });
-};
 
 module.exports = { postEvent };

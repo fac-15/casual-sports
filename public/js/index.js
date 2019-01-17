@@ -6,4 +6,3 @@ const navbarFunction = () => {
     x.className = "topnav";
   }
 };
-
