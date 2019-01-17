@@ -10,11 +10,11 @@ router.get("/", (request, response) => {
 });
 
 router.get("/search/:sport", (request, response) => {
-  console.log(request.params.sport)
-  getAllData
-    .getTableData("events")
+  const searchInput = request.params.sport
+getAllData
+    .searchSport("events", searchInput)
     .then(result => {
-      response.render("search", { eventsData: result });
+      response.render("search", { sportsData: result });
     })
     .catch(err => {
       response.status(err, 500);
