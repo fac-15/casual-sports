@@ -6,10 +6,15 @@ const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
 
 router.get("/", (request, response) => {
+      response.render("home");
+});
+
+router.get("/search/:sport", (request, response) => {
+  console.log(request.params.sport)
   getAllData
     .getTableData("events")
     .then(result => {
-      response.render("home", { eventData: result });
+      response.render("search", { eventsData: result });
     })
     .catch(err => {
       response.status(err, 500);
