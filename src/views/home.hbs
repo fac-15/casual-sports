@@ -2,6 +2,8 @@
     <form action='/search' method='POST'>
         <ul class="form" id="home-form">
             <label for="search-events"><h2>Search events</h2></label>
+            <label class="solo" for="events">Events<input type="radio" id="events" name="table" value="events" checked></label>
+            <label class="solo" for="teams">Teams<input type="radio" id="teams" name="table" value="teams"></label>
             <input name='sport' type='text' id="search-events" list="sport-list" class="field-long"
                 placeholder="Type a sport here" required />
             <datalist name= "sport-list" id="sport-list">
@@ -13,6 +15,7 @@
                 <option value="football">
             </datalist>
                   <button  type="submit" id="home-submit" class="button-submit">Search</button>
+
         </ul>
     </form>
     <img class="main-gif" src="https://media.giphy.com/media/t58dlbfM3LabS/giphy.gif" alt="Man cheering for sport">

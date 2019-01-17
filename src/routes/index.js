@@ -10,10 +10,11 @@ router.get("/", (request, response) => {
       response.render("home");
 });
 
-router.get("/search/:sport", (request, response) => {
+router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport
+  const table = request.params.table
 getAllData
-    .searchSport("events", searchInput)
+    .searchSport(table, searchInput)
     .then(result => {
       response.render("search", { sportsData: result });
     })
