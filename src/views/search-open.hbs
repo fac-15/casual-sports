@@ -1,0 +1,24 @@
+<main class="page-content events">
+    <section class="event" id="event">
+        <ul class="event-list">
+                {{#each sportsData}}
+                {{#if solo}}
+                <li><a class="read-more" href="/teams/{{id}}">
+                        <h2>{{name}}</h2>
+                        <h2>Gender: {{genders genders}}</h2>
+                        <h2>Skill level: {{skillz skill}} </h2>
+                        <h2>Age Range: {{ageRange ages}}</h2>
+                        <h2>Looking for team mates: {{yesOrNo solo}}
+                    </a></li>
+                 {{else}}
+                  {{#if open}}
+                  <li><a class="read-more" href="/events/{{id}}">
+                          <h2>{{name}}</h2>
+                          <h2>Open for walk-in participants: {{yesOrNo open}}</h2>
+                      </a></li>
+                {{/if}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </section>
+</main>

@@ -10,13 +10,26 @@ router.get("/", (request, response) => {
       response.render("home");
 });
 
+router.get("/search-open/:table/:sport", (request, response) => {
+  const searchInput = request.params.sport
+  const table = request.params.table
+getAllData
+    .searchSport(table, searchInput)
+    .then(result => {
+      response.render("search-open", { sportsData: result});
+    })
+    .catch(err => {
+      response.status(err, 500);
+    });
+})
+
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport
   const table = request.params.table
 getAllData
     .searchSport(table, searchInput)
     .then(result => {
-      response.render("search", { sportsData: result });
+      response.render("search", { sportsData: result, table: table, sport: searchInput });
     })
     .catch(err => {
       response.status(err, 500);
