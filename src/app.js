@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
+const helpers = require("./views/helpers/index");
 
 
 // const helpers = require("./views/helpers/index.js");
@@ -21,7 +22,8 @@ app.engine(
     extname: "hbs",
     layoutsDir: path.join(__dirname, "views", "layouts"),
     partialsDir: path.join(__dirname, "views", "partials"),
-    defaultLayout: "main"
+    defaultLayout: "main",
+    helpers: helpers
   })
 );
 
