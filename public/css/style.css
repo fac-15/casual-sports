@@ -1,16 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Major+Mono+Display|Lato');
+
+:root {
+  --orange: #E27D60;
+  --light-blue: rgb(140, 243, 243);
+  --light-orange: #E8A87C;
+  --pink: #C38D9E;
+  --blue: #41B3A3;
+}
+
+body {
+  background: var(--light-blue);
+  color: rgb(0, 26, 51);
+}
+
 h1 {
   display: inline-block;
   font-size: 2em;
+  padding: 0.1em;
+  font-family: 'Major Mono Display', monospace; 
 }
 
 h2 {
   margin: 1em 0 0.5em 0;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
+  font-family: 'Major Mono Display', monospace; 
+}
+
+a {
+  font-family: 'Major Mono Display', monospace; 
+  color:  rgb(0, 26, 51);
 }
 
 .topnav {
-  background-color: rgb(151, 151, 151);
+  background-color: var(--blue);
   overflow: hidden;
 }
 
@@ -30,7 +53,7 @@ h2 {
 }
 
 .active {
-  background-color: rgb(148, 212, 150);
+  background-color: var(--orange);
   color: rgb(0, 0, 0);
 }
 
@@ -86,10 +109,10 @@ h2 {
   margin: 0.4em 0 0.2em 0;
   padding: 0.4em;
   display: block;
-  font-weight: bold;
-  font-family: "Syncopate", sans-serif;
-  font-size: 1em;
-  color: rgb(0, 0, 0);
+  font-weight: regular;
+  font-family: 'Lato', sans-serif; 
+  font-size: 2em;
+  color: rgb(0, 26, 51);
 }
 
 .form input[type="text"],
@@ -99,7 +122,7 @@ textarea {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  border: 0.2em solid #379683;
+  border: 0.2em solid var(--light-orange);
   padding: 0.8em;
   margin: 0;
   -webkit-transition: all 0.3s ease-in-out;
@@ -131,14 +154,15 @@ textarea {
 }
 
 .button-submit {
-  background: #32553f;
+  background: var(--orange);
   margin: 0.4em;
   padding: 0.6em;
   text-align: center;
   border: none;
   color: #fff;
+  font-family: 'Major Mono Display', sans-serif; 
   font-size: 1em;
-  color: #cad8e6;
+  color:  rgb(0, 26, 51);
 }
 
 .button-submit :hover {
