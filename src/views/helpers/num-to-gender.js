@@ -1,8 +1,4 @@
-// key func
 
-// skill level
-
-// gender one
 const numToString = (num) => {
   let gender;
   if(num === 1){
