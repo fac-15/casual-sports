@@ -14,7 +14,7 @@ const searchSport = (table, sports) => {
       dbConnection.query(`SELECT * FROM ${table} WHERE sport = '${sports}'`, (err, res) => {
         if (err) reject(err);
           else if (res.rows.length === 0) resolve('no results')
-          else resolve(res.rows);
+          else resolve((res.rows).reverse());
       });
     });
   }
