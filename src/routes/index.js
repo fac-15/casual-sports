@@ -11,25 +11,28 @@ router.get("/", (request, response) => {
 });
 
 router.get("/search-open/:table/:sport", (request, response) => {
-  const searchInput = request.params.sport
-  const table = request.params.table
-getAllData
+  const searchInput = request.params.sport;
+  const table = request.params.table;
+  getAllData
     .searchSport(table, searchInput)
     .then(result => {
-      response.render("search-open", { sportsData: result});
+      response.render("search-open", { sportsData: result });
     })
     .catch(err => {
       response.status(err, 500);
     });
-})
+});
 
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;
-    getAllData
-    .searchSport(table, searchInput)
+    getAllData.searchSport(table, searchInput)
     .then(result => {
-      response.render("search", { sportsData: result, table: table, sport: searchInput });
+      response.render("search", {
+        sportsData: result,
+        table,
+        sport: searchInput
+      });
     })
     .catch(err => {
       response.status(err, 500);
@@ -61,7 +64,7 @@ router.get("/teams", (request, response) => {
 router.get("/events/:id", (req, res) => {
   getOneEvent(req.params.id)
     .then(result => {
-      let rest = result[0];
+      const rest = result[0];
       res.render("event-info", { eventInfo: rest });
     })
     .catch(err => {

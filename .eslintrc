@@ -1,0 +1,12 @@
+{
+  "extends": ["node", "prettier"],
+  "env": { "node": true, "browser": true },
+  "rules": {
+    "no-console": "off",
+    "no-undef": "off",
+    "import/no-commonjs": "off",
+    "no-unused-vars": "off",
+    "import/no-nodejs-modules": "off",
+    "no-sync": "off"
+  }
+}
