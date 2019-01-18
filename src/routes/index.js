@@ -26,7 +26,7 @@ router.get("/search-open/:table/:sport", (request, response) => {
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;
-    .searchSport(table, searchInput)
+    getAllData.searchSport(table, searchInput)
     .then(result => {
       response.render("search", {
         sportsData: result,
