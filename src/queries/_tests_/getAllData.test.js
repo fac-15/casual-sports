@@ -3,7 +3,7 @@ const dbBuild = require("../../db/db_build.js");
 
 const events = [
   {
-    event_date: "09-03-2019",
+    event_date: "2019-03-09",
     genders: 3,
     id: 1,
     location: "london",
@@ -14,7 +14,7 @@ const events = [
     users_id: 1
   },
   {
-    event_date: "11-03-2019",
+    event_date: "2019-03-11",
     genders: 4,
     id: 2,
     location: "Kizhinga",
@@ -25,7 +25,7 @@ const events = [
     users_id: 72
   },
   {
-    event_date: "17-04-2019",
+    event_date: "2019-04-17",
     genders: 4,
     id: 3,
     location: "Trzcinica",
@@ -36,7 +36,7 @@ const events = [
     users_id: 93
   },
   {
-    event_date: "20-04-2019",
+    event_date: "2019-04-20",
     genders: 4,
     id: 4,
     location: "Gandapura",
@@ -47,7 +47,7 @@ const events = [
     users_id: 88
   },
   {
-    event_date: "24-04-2019",
+    event_date: "2019-04-24",
     genders: 1,
     id: 5,
     location: "Gangkou",
@@ -58,7 +58,7 @@ const events = [
     users_id: 76
   },
   {
-    event_date: "02-05-2019",
+    event_date: "2019-05-02",
     genders: 2,
     id: 6,
     location: "Niort",
@@ -69,7 +69,7 @@ const events = [
     users_id: 95
   },
   {
-    event_date: "06-05-2019",
+    event_date: "2019-05-06",
     genders: 3,
     id: 7,
     location: "Guangshun",
@@ -80,7 +80,7 @@ const events = [
     users_id: 44
   },
   {
-    event_date: "08-05-2019",
+    event_date: "2019-05-08",
     genders: 2,
     id: 8,
     location: "Dagar",
@@ -91,7 +91,7 @@ const events = [
     users_id: 35
   },
   {
-    event_date: "10-05-2019",
+    event_date: "2019-05-10",
     genders: 4,
     id: 9,
     location: "Chechen-Aul",
@@ -102,7 +102,7 @@ const events = [
     users_id: 3
   },
   {
-    event_date: "12-05-2019",
+    event_date: "2019-05-12",
     genders: 3,
     id: 10,
     location: "Aygestan",
@@ -113,7 +113,7 @@ const events = [
     users_id: 58
   },
   {
-    event_date: "18-05-2019",
+    event_date: "2019-05-18",
     genders: 3,
     id: 11,
     location: "Spasskoye-Lutovinovo",
@@ -124,7 +124,7 @@ const events = [
     users_id: 56
   },
   {
-    event_date: "19-05-2019",
+    event_date: "2019-05-19",
     genders: 3,
     id: 12,
     location: "Rujewa",
@@ -135,7 +135,7 @@ const events = [
     users_id: 82
   },
   {
-    event_date: "22-05-2019",
+    event_date: "2019-05-22",
     genders: 2,
     id: 13,
     location: "Andilamena",
@@ -146,7 +146,7 @@ const events = [
     users_id: 43
   },
   {
-    event_date: "26-05-2019",
+    event_date: "2019-05-26",
     genders: 1,
     id: 14,
     location: "Pecoro",
@@ -157,7 +157,7 @@ const events = [
     users_id: 38
   },
   {
-    event_date: "27-05-2019",
+    event_date: "2019-05-27",
     genders: 1,
     id: 15,
     location: "Lewoluo",
@@ -168,7 +168,7 @@ const events = [
     users_id: 17
   },
   {
-    event_date: "02-06-2019",
+    event_date: "2019-06-02",
     genders: 4,
     id: 16,
     location: "Piancheng",
@@ -179,7 +179,7 @@ const events = [
     users_id: 24
   },
   {
-    event_date: "04-06-2019",
+    event_date: "2019-06-04",
     genders: 1,
     id: 17,
     location: "Krasica",
@@ -190,7 +190,7 @@ const events = [
     users_id: 97
   },
   {
-    event_date: "08-06-2019",
+    event_date: "2019-06-08",
     genders: 2,
     id: 18,
     location: "Zhaobei",
@@ -201,7 +201,7 @@ const events = [
     users_id: 10
   },
   {
-    event_date: "10-06-2019",
+    event_date: "2019-06-10",
     genders: 1,
     id: 19,
     location: "Teminabuan",
@@ -212,7 +212,7 @@ const events = [
     users_id: 54
   },
   {
-    event_date: "14-06-2019",
+    event_date: "2019-06-14",
     genders: 1,
     id: 20,
     location: "Guarapuava",
@@ -223,7 +223,7 @@ const events = [
     users_id: 90
   },
   {
-    event_date: "18-06-2019",
+    event_date: "2019-06-18",
     genders: 1,
     id: 21,
     location: "Xinbu",
@@ -234,7 +234,7 @@ const events = [
     users_id: 32
   },
   {
-    event_date: "24-06-2019",
+    event_date: "2019-06-24",
     genders: 2,
     id: 22,
     location: "Dushu",
@@ -245,7 +245,7 @@ const events = [
     users_id: 82
   },
   {
-    event_date: "26-06-2019",
+    event_date: "2019-06-26",
     genders: 4,
     id: 23,
     location: "Woloara",
@@ -256,7 +256,7 @@ const events = [
     users_id: 56
   },
   {
-    event_date: "04-07-2019",
+    event_date: "2019-07-04",
     genders: 2,
     id: 24,
     location: "Nikol’sk",
@@ -267,7 +267,7 @@ const events = [
     users_id: 11
   },
   {
-    event_date: "06-07-2019",
+    event_date: "2019-07-06",
     genders: 4,
     id: 25,
     location: "Bom Jesus dos Perdões",
@@ -278,7 +278,7 @@ const events = [
     users_id: 65
   },
   {
-    event_date: "07-06-2019",
+    event_date: "2019-06-07",
     genders: 4,
     id: 26,
     location: "Baoshan",
@@ -289,7 +289,7 @@ const events = [
     users_id: 71
   },
   {
-    event_date: "09-07-2019",
+    event_date: "2019-07-09",
     genders: 1,
     id: 27,
     location: "Yaguachi Nuevo",
@@ -300,7 +300,7 @@ const events = [
     users_id: 84
   },
   {
-    event_date: "14-07-2019",
+    event_date: "2019-07-14",
     genders: 1,
     id: 28,
     location: "Baihe",
@@ -311,7 +311,7 @@ const events = [
     users_id: 5
   },
   {
-    event_date: "17-07-2019",
+    event_date: "2019-07-17",
     genders: 4,
     id: 29,
     location: "Lékoni",
@@ -322,7 +322,7 @@ const events = [
     users_id: 87
   },
   {
-    event_date: "19-07-2019",
+    event_date: "2019-07-19",
     genders: 3,
     id: 30,
     location: "Årjäng",
@@ -333,7 +333,7 @@ const events = [
     users_id: 79
   },
   {
-    event_date: "24-07-2019",
+    event_date: "2019-07-24",
     genders: 3,
     id: 31,
     location: "Souq Larb’a al Gharb",

@@ -3,7 +3,7 @@ const dbBuild = require("../../db/db_build.js");
 
 const funAtThePark = [
   {
-    event_date: "09-03-2019",
+    event_date: "2019-03-09",
     genders: 3,
     id: 1,
     location: "london",
