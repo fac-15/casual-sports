@@ -37,21 +37,31 @@ h3 {
 a {
   font-family: 'Raleway', sans-serif;
   color:  rgb(0, 26, 51);
+  text-decoration: none;
 }
 
 ul {
   display: flex;
   flex-direction: column;
+  padding-top: 2em;
+  max-width: 60%;
+  margin: 0 auto;
+  list-style-type: none;
 }
 
 li {
   padding: 1em;
+  border: 0.2em dashed var(--blue);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-size: 2em;  
+  font-size: 1.4em;  
 }
 
 .topnav {
@@ -187,7 +197,7 @@ input[type="radio" i] {
 }
 
 .form input[type="text"],
-#age-options,
+#age-options, #skill-level, 
 .form input[type="password"],
 textarea {
   box-sizing: border-box;

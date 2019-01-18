@@ -26,7 +26,6 @@ getAllData
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;
-  console.log(table);
     getAllData
     .searchSport(table, searchInput)
     .then(result => {
