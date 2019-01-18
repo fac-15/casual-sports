@@ -27,7 +27,7 @@ CREATE TABLE events (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   sport TEXT NOT NULL,
-  when DATES NOT NULL,
+  when DATE NOT NULL,
   start_time TIME NOT NULL,
   users_id INTEGER REFERENCES users(id),
   location TEXT NOT NULL,
