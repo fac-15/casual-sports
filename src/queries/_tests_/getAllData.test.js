@@ -720,7 +720,7 @@ const teams = [
 ];
 
 test("the function returns all of the event data", () => {
-  dbBuild(function(error, response) {
+  dbBuild((error, response) => {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     expect.assertions(1);
     return expect(getAllData.getTableData("events")).resolves.toEqual(events);
@@ -736,7 +736,7 @@ test("the function returns all of the event data", () => {
 // });
 
 test("the function returns all of the team data", () => {
-  dbBuild(function(error, response) {
+  dbBuild((error, response) => {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     expect.assertions(1);
     return expect(getAllData.getTableData("teams")).resolves.toEqual(teams);
