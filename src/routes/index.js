@@ -29,15 +29,7 @@ router.get("/search/:table/:sport", (request, response) => {
   getAllData
     .searchSport(table, searchInput)
     .then(result => {
-<<<<<<< HEAD
-      if (table === events) {
-      response.render("search", { sportsData: result });}
-      else {
-        response.render("search", { teamData: result });}
-      }
-=======
       response.render("search", { sportsData: result, table: table, sport: searchInput });
->>>>>>> staging
     })
     .catch(err => {
       response.status(err, 500);
