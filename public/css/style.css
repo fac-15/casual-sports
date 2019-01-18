@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Major+Mono+Display|Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Montserrat+Subrayada|Lato');
 
 :root {
   --orange: #E27D60;
@@ -17,19 +17,51 @@ h1 {
   display: inline-block;
   font-size: 2em;
   padding: 0.1em;
-  font-family: 'Major Mono Display', monospace; 
+  font-family: 'Montserrat Subrayada', sans-serif; 
 }
 
 h2 {
-  margin: 1em 0 0.5em 0;
-  font-size: 2.5em;
+  margin: 0em 0 0.5em 0;
+  font-size: 3em;
+  padding: 0.4em;
   text-align: center;
-  font-family: 'Major Mono Display', monospace; 
+  font-family: 'Montserrat Subrayada', sans-serif; 
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Montserrat Subrayada', sans-serif; 
+  font-size: 2em;
 }
 
 a {
-  font-family: 'Major Mono Display', monospace; 
+  font-family: 'Raleway', sans-serif;
   color:  rgb(0, 26, 51);
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  max-width: 60%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+li {
+  padding: 1em;
+  border: 0.2em dashed var(--blue);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 1.4em;  
 }
 
 .topnav {
@@ -68,15 +100,59 @@ a {
   display: inline;
 }
 
+
+/* -------------------spreading divs------------- */
+
+.spread {
+  transform: translate(-35em) rotate(-45deg);
+}
+
+.spread > div:nth-child(1) {
+  animation-duration: 6.5s;
+  animation-name: slidein;
+  background-color: var(--light-orange);
+  height: 2em;
+  margin: 2em;
+}
+
+.spread > div:nth-child(2) {
+  animation-duration: 5.5s;
+  animation-name: slidein;
+  background-color: var(--blue);
+  height: 2em;
+  margin: 2em;
+}
+
+.spread > div:nth-child(3) {
+  animation-duration: 4.5s;
+  animation-name: slidein;
+  background-color: var(--pink);
+  height: 2em;
+  margin: 2em;
+}
+
+@keyframes slidein {
+  from {
+    width: 0%; 
+  }
+
+  to {
+    width: 70%;
+  }
+}
+
 /*------------------------- form ------------------------ */
 
 /* add event form */
 
-.gender-span .gender,
+.gender-span .genders,
 .solo-span .solo {
   display: inline-block;
   font-weight: normal;
+  font-size: 1em;
+  padding: 0.4em;
 }
+
 
 .gender-span {
   display: block;
@@ -89,7 +165,29 @@ a {
 }
 
 #home-form input {
-  width: 70%;
+  width: 100%;
+}
+
+input[type="radio" i] {
+  height: 1.8em;
+  padding: 1em;
+  margin: 0;
+  max-width: 4em;
+}
+
+input[type="date" i],
+input[type="time" i] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 0.2em solid var(--light-orange);
+  padding: 1em;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
 }
 
 #search-events,
@@ -101,7 +199,7 @@ a {
 
 .form {
   margin: 0 auto;
-  max-width: 25em;
+  max-width: 30em;
   padding: 2em 1em 1em 2em;
 }
 
@@ -110,20 +208,20 @@ a {
   padding: 0em;
   display: block;
   font-weight: regular;
-  font-family: 'Lato', sans-serif; 
-  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4em;
   color: rgb(0, 26, 51);
 }
 
 .form input[type="text"],
-#age-options,
+#age-options, #skill-level, 
 .form input[type="password"],
 textarea {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   border: 0.2em solid var(--light-orange);
-  padding: 0.8em;
+  padding: 1em;
   margin: 0;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -142,7 +240,7 @@ textarea {
 }
 
 .form {
-  width: 49%;
+  width: 60%;
 }
 
 .form .field-long {
@@ -150,7 +248,7 @@ textarea {
 }
 
 .form .field-textarea {
-  height: 100px;
+  height: 100%;
 }
 
 .button-submit {
@@ -160,7 +258,7 @@ textarea {
   text-align: center;
   border: none;
   color: #fff;
-  font-family: 'Major Mono Display', sans-serif; 
+  font-family: 'Montserrat Subrayada', sans-serif; 
   font-size: 1.4em;
   color:  rgb(0, 26, 51);
 }

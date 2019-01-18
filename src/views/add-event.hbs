@@ -1,19 +1,25 @@
 <main class="page-content add-event">
     <section id="add-event" title="add-event">
         <form action='/add-event' method='POST'>
-            <h2>Add Event</h2>
+            <h3>Add Event</h3>
             <ul class="form" id="add-event-form">
                 <label for="name-of-event">Name</label><input pattern="^[^<>]+$" name='name' type='text' id="name-of-event"
                     class="field-long" placeholder="Type the name of the event" required />
                 <label for="sport">Sport</label><input pattern="^[^<>]+$" name='sport' type='text' id="sport" class="field-long"
                     placeholder="Type the name of the sport" required />
+                <label for="date-of-event">Date</label><input pattern="^[^<>]+$" name='event_date' type='date' id="date-of-event"
+                    class="field-long" value="31-12-2019" placeholder="Type the date of the event, e.g 31-12-2019"
+                    required />
+                <label for="time-of-event">Time</label><input pattern="^[^<>]+$" name='start_time' type='time' id="time-of-event"
+                    class="field-long" placeholder="Type the time, e.g: 18:30" value="18:00" required />
                 <label for="location">Location</label><input pattern="^[^<>]+$" name='location' type='text' id="location"
                     class="field-long" placeholder="Type the location (post code)" required />
-                <label class="gender-span">Gender:
-                    <label class="gender" for="mixed">Mixed<input type="radio" id="mixed" name="gender" value="1"
+                <label class="gender-span">Gender: <br>
+                    <label class="genders" for="mixed">Mixed<input type="radio" id="mixed" name="genders" value="1"
                             checked></label>
-                    <label class="gender" for="male">Male<input type="radio" id="male" name="gender" value="2"></label>
-                    <label class="gender" for="female">Female<input type="radio" id="female" name="gender" value="3"></label>
+                    <label class="genders" for="male">Male<input type="radio" id="male" name="genders" value="2"></label>
+                    <label class="genders" for="female">Female<input type="radio" id="female" name="genders" value="3"></label>
+                    <label class="genders" for="other">Other<input type="radio" id="other" name="genders" value="4"></label>
                 </label>
                 <label class="solo-span">Is this an open event?
                     <label class="solo" for="yes">Yes<input type="radio" id="yes" name="open" value="true" checked></label>

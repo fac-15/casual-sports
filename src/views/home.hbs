@@ -1,9 +1,18 @@
 <section id="search-home" title="search-home">
     <form action='/search' method='POST'>
+
+        <div class="spread">
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+
+            <h2>Get fit without having to commit</h2>
+
         <ul class="form" id="home-form">
-            <label for="search-events"><h2>Search events</h2></label>
-            <label class="solo" for="events">Events<input type="radio" id="events" name="table" value="events" checked></label>
-            <label class="solo" for="teams">Teams<input type="radio" id="teams" name="table" value="teams"></label>
+            <label for="search-events"><h3>Looking to do sports?</h3></label>
+            <label class="solo" for="events">Yeah show me what's on <br> <input type="radio" id="events" name="table" value="events" checked><- click here to see events</label>
+            <label class="solo" for="teams">Who can I play with/against? <br><input type="radio" id="teams" name="table" value="teams"><- click here to see teams</label>
             <input name='sport' type='text' id="search-events" list="sport-list" class="field-long"
                 placeholder="Type a sport here" required />
             <datalist name= "sport-list" id="sport-list">
@@ -18,5 +27,4 @@
 
         </ul>
     </form>
-    <img class="main-gif" src="https://media.giphy.com/media/t58dlbfM3LabS/giphy.gif" alt="Man cheering for sport">
 </section>
