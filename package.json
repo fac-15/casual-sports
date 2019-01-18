@@ -7,10 +7,15 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --forceExit --coverage && NODE_ENV='test'",
+    "test": "jest --coverage && NODE_ENV='test'",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
+
+  "jest": {
+    "transform": {}
+  }
+,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fac-15/casual-sports.git"
@@ -28,6 +33,8 @@
     "supertest": "^3.3.0"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "env2": "^2.2.2",
@@ -40,6 +47,7 @@
     "fs": "0.0.1-security",
     "pg": "^7.8.0",
     "pg-promise": "^8.5.4",
+    "regenerator-runtime": "^0.13.1",
     "serve-favicon": "^2.5.0",
     "url": "^0.11.0"
   }
