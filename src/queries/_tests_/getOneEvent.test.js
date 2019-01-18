@@ -3,13 +3,15 @@ const dbBuild = require("../../db/db_build.js");
 
 const funAtThePark = [
   {
-    id: 1,
-    name: "fun at the park",
-    sport: "Football",
-    users_id: 1,
-    location: "london",
+    event_date: "09-03-2019",
     genders: 3,
-    open: true
+    id: 1,
+    location: "london",
+    name: "fun at the park",
+    open: true,
+    sport: "Football",
+    start_time: "12:00",
+    users_id: 1
   }
 ];
 
