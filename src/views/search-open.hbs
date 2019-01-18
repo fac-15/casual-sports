@@ -4,17 +4,17 @@
                 {{#each sportsData}}
                 {{#if solo}}
                 <li><a class="read-more" href="/teams/{{id}}">
-                        <h2>{{name}}</h2>
-                        <h2>Gender: {{genders genders}}</h2>
-                        <h2>Skill level: {{skillz skill}} </h2>
-                        <h2>Age Range: {{ageRange ages}}</h2>
-                        <h2>Looking for team mates: {{yesOrNo solo}}
+                        <h3>{{name}}</h3>
+                        <p>Gender: {{genders genders}}</p>
+                        <p>Skill level: {{skillz skill}} </p>
+                        <p>Age Range: {{ageRange ages}}</p>
+                        <p>Looking for team mates: {{yesOrNo solo}}</p>
                     </a></li>
                  {{else}}
                   {{#if open}}
                   <li><a class="read-more" href="/events/{{id}}">
-                          <h2>{{name}}</h2>
-                          <h2>Open for walk-in participants: {{yesOrNo open}}</h2>
+                          <h3>{{name}}</h3>
+                          <p>Open for walk-in participants: {{yesOrNo open}}</p>
                       </a></li>
                 {{/if}}
                 {{/if}}

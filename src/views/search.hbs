@@ -1,12 +1,13 @@
 <main class="page-content events">
     <section class="event" id="event">
-      <a href="/search-open/{{table}}/{{sport}}">I'm just looking for teams/events I can join</a>
+
         <ul class="event-list">
+                <a href="/search-open/{{table}}/{{sport}}">I'm just looking for teams/events I can join</a>
                 {{#each sportsData}}
             <li><a class="read-more" href="/teams/{{id}}">
-                    <h2>{{name}}</h2>
+                    <h3>{{name}}</h3>
                 </a></li>
-            {{/each}}
+                {{/each}}
         </ul>
     </section>
 </main>
