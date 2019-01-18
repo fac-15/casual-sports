@@ -9,13 +9,12 @@
   "scripts": {
     "test": "jest --coverage && NODE_ENV='test'",
     "start": "node src/index.js",
+    "pretest": "eslint --ignore-path .gitignore .",
     "dev": "nodemon src/index.js"
   },
-
   "jest": {
     "transform": {}
-  }
-,
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fac-15/casual-sports.git"

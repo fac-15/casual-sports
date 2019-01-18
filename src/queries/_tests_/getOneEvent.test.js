@@ -18,7 +18,7 @@ const funAtThePark = [
 // const error = "error: invalid input syntax for integer: \"potatoes\"";
 
 test("the function returns the data in the event with the id of 1", () => {
-  dbBuild(function(error, response) {
+  dbBuild((error, response) => {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     expect.assertions(1);
     return expect(getOneEvent(1)).resolves.toEqual(funAtThePark);
