@@ -3,286 +3,347 @@ const dbBuild = require("../../db/db_build.js");
 
 const events = [
   {
+    event_date: "09-03-2019",
     genders: 3,
     id: 1,
     location: "london",
     name: "fun at the park",
     open: true,
     sport: "Football",
+    start_time: "12:00",
     users_id: 1
   },
   {
+    event_date: "11-03-2019",
     genders: 4,
     id: 2,
     location: "Kizhinga",
     name: "Zontrax",
     open: false,
     sport: "football",
+    start_time: "09:00",
     users_id: 72
   },
   {
+    event_date: "17-04-2019",
     genders: 4,
     id: 3,
     location: "Trzcinica",
     name: "Cardguard",
     open: true,
     sport: "football",
+    start_time: "10:00",
     users_id: 93
   },
   {
+    event_date: "20-04-2019",
     genders: 4,
     id: 4,
     location: "Gandapura",
     name: "Span",
     open: true,
     sport: "football",
+    start_time: "14:00",
     users_id: 88
   },
   {
+    event_date: "24-04-2019",
     genders: 1,
     id: 5,
     location: "Gangkou",
     name: "Wrapsafe",
     open: true,
     sport: "rugby",
+    start_time: "18:00",
     users_id: 76
   },
   {
+    event_date: "02-05-2019",
     genders: 2,
     id: 6,
     location: "Niort",
     name: "Overhold",
     open: false,
     sport: "water polo",
+    start_time: "15:00",
     users_id: 95
   },
   {
+    event_date: "06-05-2019",
     genders: 3,
     id: 7,
     location: "Guangshun",
     name: "Namfix",
     open: false,
     sport: "rugby",
+    start_time: "16:00",
     users_id: 44
   },
   {
+    event_date: "08-05-2019",
     genders: 2,
     id: 8,
     location: "Dagar",
     name: "Stim",
     open: false,
     sport: "football",
+    start_time: "12:00",
     users_id: 35
   },
   {
+    event_date: "10-05-2019",
     genders: 4,
     id: 9,
     location: "Chechen-Aul",
     name: "Vagram",
     open: true,
     sport: "rugby",
+    start_time: "10:00",
     users_id: 3
   },
   {
+    event_date: "12-05-2019",
     genders: 3,
     id: 10,
     location: "Aygestan",
     name: "Bitchip",
     open: false,
     sport: "rugby",
+    start_time: "14:00",
     users_id: 58
   },
   {
+    event_date: "18-05-2019",
     genders: 3,
     id: 11,
     location: "Spasskoye-Lutovinovo",
     name: "Biodex",
     open: false,
     sport: "football",
+    start_time: "16:00",
     users_id: 56
   },
   {
+    event_date: "19-05-2019",
     genders: 3,
     id: 12,
     location: "Rujewa",
     name: "Keylex",
     open: true,
     sport: "rugby",
+    start_time: "12:30",
     users_id: 82
   },
   {
+    event_date: "22-05-2019",
     genders: 2,
     id: 13,
     location: "Andilamena",
     name: "Matsoft",
     open: true,
     sport: "rugby",
+    start_time: "11:00",
     users_id: 43
   },
   {
+    event_date: "26-05-2019",
     genders: 1,
     id: 14,
     location: "Pecoro",
     name: "Rantk",
     open: true,
     sport: "rugby",
+    start_time: "14:30",
     users_id: 38
   },
   {
+    event_date: "27-05-2019",
     genders: 1,
     id: 15,
     location: "Lewoluo",
     name: "Tin",
     open: true,
     sport: "rugby",
+    start_time: "12:40",
     users_id: 17
   },
   {
+    event_date: "02-06-2019",
     genders: 4,
     id: 16,
     location: "Piancheng",
     name: "Zaam-Dox",
     open: true,
     sport: "football",
+    start_time: "18:00",
     users_id: 24
   },
   {
+    event_date: "04-06-2019",
     genders: 1,
     id: 17,
     location: "Krasica",
     name: "Otcom",
     open: false,
     sport: "water polo",
+    start_time: "17:00",
     users_id: 97
   },
   {
+    event_date: "08-06-2019",
     genders: 2,
     id: 18,
     location: "Zhaobei",
     name: "Lotlux",
     open: true,
     sport: "water polo",
+    start_time: "09:00",
     users_id: 10
   },
   {
+    event_date: "10-06-2019",
     genders: 1,
     id: 19,
     location: "Teminabuan",
     name: "Gembucket",
     open: true,
     sport: "football",
+    start_time: "19:00",
     users_id: 54
   },
   {
+    event_date: "14-06-2019",
     genders: 1,
     id: 20,
     location: "Guarapuava",
     name: "Hatity",
     open: true,
     sport: "football",
+    start_time: "18:00",
     users_id: 90
   },
   {
+    event_date: "18-06-2019",
     genders: 1,
     id: 21,
     location: "Xinbu",
     name: "Bamity",
     open: false,
     sport: "rugby",
+    start_time: "12:00",
     users_id: 32
   },
   {
+    event_date: "24-06-2019",
     genders: 2,
     id: 22,
     location: "Dushu",
     name: "Fixflex",
     open: false,
     sport: "football",
+    start_time: "13:00",
     users_id: 82
   },
   {
+    event_date: "26-06-2019",
     genders: 4,
     id: 23,
     location: "Woloara",
     name: "Subin",
     open: true,
     sport: "football",
+    start_time: "12:30",
     users_id: 56
   },
   {
+    event_date: "04-07-2019",
     genders: 2,
     id: 24,
     location: "Nikol’sk",
     name: "Pannier",
     open: false,
     sport: "rugby",
+    start_time: "15:00",
     users_id: 11
   },
   {
+    event_date: "06-07-2019",
     genders: 4,
     id: 25,
     location: "Bom Jesus dos Perdões",
     name: "Fix San",
     open: true,
     sport: "rugby",
+    start_time: "17:00",
     users_id: 65
   },
   {
+    event_date: "07-06-2019",
     genders: 4,
     id: 26,
     location: "Baoshan",
     name: "Alphazap",
     open: false,
     sport: "football",
+    start_time: "12:00",
     users_id: 71
   },
   {
+    event_date: "09-07-2019",
     genders: 1,
     id: 27,
     location: "Yaguachi Nuevo",
     name: "Opela",
     open: false,
     sport: "football",
+    start_time: "15:00",
     users_id: 84
   },
   {
+    event_date: "14-07-2019",
     genders: 1,
     id: 28,
     location: "Baihe",
     name: "Regrant",
     open: true,
     sport: "football",
+    start_time: "16:00",
     users_id: 5
   },
   {
+    event_date: "17-07-2019",
     genders: 4,
     id: 29,
     location: "Lékoni",
     name: "Lotlux",
     open: false,
     sport: "football",
+    start_time: "13:30",
     users_id: 87
   },
   {
+    event_date: "19-07-2019",
     genders: 3,
     id: 30,
     location: "Årjäng",
     name: "Tempsoft",
     open: true,
     sport: "rugby",
+    start_time: "12:40",
     users_id: 79
   },
   {
+    event_date: "24-07-2019",
     genders: 3,
     id: 31,
     location: "Souq Larb’a al Gharb",
     name: "Tempsoft",
     open: false,
     sport: "rugby",
+    start_time: "17:00",
     users_id: 84
   }
 ];
-
 const teams = [
   {
     ages: 1,
