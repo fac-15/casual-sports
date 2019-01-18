@@ -1,5 +1,3 @@
-const reverseDate = (str) => {
-  return str.split("-").reverse().join("-");
-}
+const reverseDate = (str) => str.split("-").reverse().join("-");
 
 module.exports = reverseDate;
