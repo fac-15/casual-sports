@@ -14,6 +14,8 @@ services:
 
 env:
   - TEST_DB_URL=postgres://test:1234@localhost:5432/travis_ci_test
+  global:
+  - CODECOV_TOKEN=65e214e6-d134-471c-b66e-fa5341b6f5c0
 
 before_script:
   - psql --version
