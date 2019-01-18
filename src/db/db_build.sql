@@ -27,7 +27,7 @@ CREATE TABLE events (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   sport TEXT NOT NULL,
-  when DATE NOT NULL,
+  event_date TEXT NOT NULL,
   start_time TIME NOT NULL,
   users_id INTEGER REFERENCES users(id),
   location TEXT NOT NULL,
@@ -172,7 +172,7 @@ INSERT INTO teams (name, location, user_id, size, genders, ages, skill, sport, s
  ('Stringtough', 'Al ‘Awjah',  '10',  '12',  '2',  '2',  '2', 'football', true),
  ('Flexidy', 'Sapareva Banya',  '4',  '21',  '1',  '3',  '2', 'checkers', true);
 
-INSERT INTO events(name, sport, when, start_time, users_id, location, genders, open) VALUES
+INSERT INTO events(name, sport, event_date, start_time, users_id, location, genders, open) VALUES
 ('fun at the park','Football', '09-03-2019', '12:00', '1', 'london', '3', true ),
  ('Zontrax', 'football', '11-03-2019', '09:00', '72', 'Kizhinga', '4', false),
  ('Cardguard', 'football', '17-04-2019', '10:00', '93', 'Trzcinica', '4', true),
