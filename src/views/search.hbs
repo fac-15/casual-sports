@@ -4,9 +4,23 @@
         <ul class="event-list">
                 <a href="/search-open/{{table}}/{{sport}}">I'm just looking for teams/events I can join</a>
                 {{#each sportsData}}
-            <li><a class="read-more" href="/teams/{{id}}">
-                    <h3>{{name}}</h3>
-                </a></li>
+                {{#if event_date}}
+
+
+                  <li><a class="read-more" href="/events/{{id}}">
+                          <h3>{{name}}</h3>
+                          <p>Open for walk-in participants: {{yesOrNo open}}</p>
+                      </a></li>
+                 {{else}}
+
+                        <li><a class="read-more" href="/teams/{{id}}">
+                        <h3>{{name}}</h3>
+                        <p>Gender: {{genders genders}}</p>
+                        <p>Skill level: {{skillz skill}} </p>
+                        <p>Age Range: {{ageRange ages}}</p>
+                        <p>Looking for team mates: {{yesOrNo solo}}</p>
+                        </a></li>
+                {{/if}}
                 {{/each}}
         </ul>
     </section>

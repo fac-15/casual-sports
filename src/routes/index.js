@@ -26,7 +26,8 @@ getAllData
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;
-  getAllData
+  console.log(table);
+    getAllData
     .searchSport(table, searchInput)
     .then(result => {
       response.render("search", { sportsData: result, table: table, sport: searchInput });
@@ -72,8 +73,7 @@ router.get("/events/:id", (req, res) => {
 router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
     .then(result => {
-      let rest = result[0];
-      res.render("team-info", { teamInfo: rest });
+      res.render("team-info", { teamData: result });
     })
     .catch(err => {
       res.status(err, 500);
