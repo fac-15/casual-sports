@@ -14,6 +14,7 @@ const postEvent = newEvent => {
       newEvent.open
     ];
     dbConnection.query(query, values, (err, res) => {
+      console.log(newEvent.event_date);
       if (err) reject(err);
       else resolve(res.rows);
     });
