@@ -1,6 +1,5 @@
 # socialist-sports
-
-![](https://travis-ci.org/fac-15/casual-sports.svg?branch=staging)
+[![Build Status](https://travis-ci.com/fac-15/casual-sports.svg?branch=staging)](https://travis-ci.com/fac-15/casual-sports)
 
 ## Initial user research
 
