@@ -145,10 +145,12 @@ p {
 
 /* add event form */
 
-.gender-span .gender,
+.gender-span .genders,
 .solo-span .solo {
   display: inline-block;
   font-weight: normal;
+  font-size: 1em;
+  padding: 0.4em;
 }
 
 
@@ -171,6 +173,21 @@ input[type="radio" i] {
   padding: 1em;
   margin: 0;
   max-width: 4em;
+}
+
+input[type="date" i],
+input[type="time" i] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 0.2em solid var(--light-orange);
+  padding: 1em;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
 }
 
 #search-events,
