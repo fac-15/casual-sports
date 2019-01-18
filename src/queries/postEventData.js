@@ -10,7 +10,7 @@ const postEvent = newEvent => {
       newEvent.start_time,
       "5",
       newEvent.location,
-      newEvent.gender,
+      newEvent.genders,
       newEvent.open
     ];
     dbConnection.query(query, values, (err, res) => {
