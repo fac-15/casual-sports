@@ -28,7 +28,7 @@ CREATE TABLE events (
   name TEXT NOT NULL,
   sport TEXT NOT NULL,
   event_date TEXT NOT NULL,
-  start_time TIME NOT NULL,
+  start_time TEXT NOT NULL,
   users_id INTEGER REFERENCES users(id),
   location TEXT NOT NULL,
   genders INTEGER,
