@@ -69,18 +69,19 @@ router.get("/events/:id", (req, res) => {
     });
 });
 
-router.get("/new-event", (req, res) => {
-  res.render("new-event", { eventInfo: "this" });
-});
-
 router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
     .then(result => {
-      res.render("team-info", { teamData: result });
+      let rest = result[0];
+      res.render("team-info", { teamInfo: rest });
     })
     .catch(err => {
       res.status(err, 500);
     });
+});
+
+router.get("/new-event", (req, res) => {
+  res.render("new-event", { eventInfo: "this" });
 });
 
 router.get("/sign-up", (req, res) => {
