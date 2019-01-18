@@ -2,7 +2,11 @@
     <section class="event" id="event">
         <ul class="read">
             <li>
-                <h2 id="event-title">{{eventInfo.name}}</h2>
+                <h3 id="event-title">{{eventInfo.name}}</h3>
+            <p>Sport: {{eventInfo.sport}}</p>
+            <p>Location: {{eventInfo.location}}</p>
+            <p>Genders: {{genders eventInfo.genders}}</p>
+            <p>Open for walk-in participants: {{yesOrNo eventInfo.open}}</p>
             </li>
             <li class="read-event">{{reverseDate eventInfo.event_date}}</li>
             <li class="read-event">Sport: {{eventInfo.sport}}</li>

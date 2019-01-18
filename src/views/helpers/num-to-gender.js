@@ -1,5 +1,4 @@
-
-const numToString = (num) => {
+const numToString = num => {
   let gender;
   if(num === "1"){
     gender = "Mixed";
@@ -13,6 +12,6 @@ const numToString = (num) => {
     gender = "Invalid input";
   }
   return gender;
-}
+};
 
 module.exports = numToString;
