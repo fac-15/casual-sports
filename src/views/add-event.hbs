@@ -7,10 +7,11 @@
                     class="field-long" placeholder="Type the name of the event" required />
                 <label for="sport">Sport</label><input pattern="^[^<>]+$" name='sport' type='text' id="sport" class="field-long"
                     placeholder="Type the name of the sport" required />
-                <label for="date-of-event">Date</label><input pattern="^[^<>]+$" name='date' type='text' id="date-of-event"
-                    class="field-long" placeholder="Type the date of the event, e.g 31-12-2019" required />
-                <label for="time-of-event">Date</label><input pattern="^[^<>]+$" name='time' type='text' id="time-of-event"
-                    class="field-long" placeholder="Type the time, e.g: 18:30" required />
+                <label for="date-of-event">Date</label><input pattern="^[^<>]+$" name='when' type='date' id="date-of-event"
+                    class="field-long" value="31-12-2019" placeholder="Type the date of the event, e.g 31-12-2019"
+                    required />
+                <label for="time-of-event">Time</label><input pattern="^[^<>]+$" name='start_time' type='time' id="time-of-event"
+                    class="field-long" placeholder="Type the time, e.g: 18:30" value="18:00" required />
                 <label for="location">Location</label><input pattern="^[^<>]+$" name='location' type='text' id="location"
                     class="field-long" placeholder="Type the location (post code)" required />
                 <label class="gender-span">Gender:
