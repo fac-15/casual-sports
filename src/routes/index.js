@@ -96,7 +96,8 @@ router.get("/events/:id", (req, res) => {
 router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
     .then(result => {
-      res.render("team-info", { teamData: result });
+      const rest = result[0];
+      res.render("team-info", { teamData: rest });
     })
     .catch(err => {
       res.status(err, 500);
