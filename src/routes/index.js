@@ -5,6 +5,27 @@ const router = express.Router();
 const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
+const postEventData = require("../queries/postEventData");
+const postTeamData = require("../queries/postTeamData");
+
+router.post("/search", (req, res) => {
+  const table = req.body.table;
+  const searchInput = req.body.sport;
+  res.redirect(`/search/${table}/${searchInput}`);
+});
+
+router.post("/add-event", (req, res) => {
+  console.log("HERE IS REQ", req);
+  const newEvent = req.body;
+  postEventData.postEvent(newEvent);
+  res.redirect(`/`);
+});
+
+router.post("/add-team", (req, res) => {
+  const newTeam = req.body;
+  postTeamData.postTeam(newTeam);
+  res.redirect(`/`);
+});
 
 router.get("/", (request, response) => {
   response.render("home");
