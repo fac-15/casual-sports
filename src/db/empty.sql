@@ -1,5 +1,7 @@
 BEGIN;
 
-TRUNCATE TABLE users, events, teams;
+TRUNCATE TABLE users;
+TRUNCATE TABLE teams;
+TRUNCATE TABLE events;
 
 COMMIT;
