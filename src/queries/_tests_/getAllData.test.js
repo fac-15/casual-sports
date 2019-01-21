@@ -10,13 +10,13 @@ test("the function returns all of the event data", () => {
   });
 });
 
-// test("the function fails with an error", () => {
-//   dbBuild(function(error, response) {
-//     if (error) return console.log("ERROR IN DBBUILD: " + error);
-//     const msg = "OMG EXPLOSIONS";
-//     return expect(getAllData.getTableData(new Error())).rejects.toThrow(msg);
-//   });
-// });
+test("the function fails with an error", () => {
+  dbBuild((error, response) => {
+    if (error) return console.log("ERROR IN DBBUILD: " + error);
+    const msg = "OMG EXPLOSIONS";
+    return expect(getAllData.getTableData(new Error())).rejects.toThrow(msg);
+  });
+});
 
 test("the function returns all of the team data", () => {
   dbBuild((error, response) => {
@@ -26,10 +26,10 @@ test("the function returns all of the team data", () => {
   });
 });
 
-// test("the function fails with an error", () => {
-//   dbBuild(function(error, response) {
-//     if (error) return console.log("ERROR IN DBBUILD: " + error);
-//     const msg = "OMG EXPLOSIONS";
-//     return expect(getAllData.getTableData(new Error())).rejects.toThrow(msg);
-//   });
-// });
+test("the function fails with an error", () => {
+  dbBuild((error, response) => {
+    if (error) return console.log("ERROR IN DBBUILD: " + error);
+    const msg = "OMG EXPLOSIONS";
+    return expect(getAllData.getTableData(new Error())).rejects.toThrow(msg);
+  });
+});

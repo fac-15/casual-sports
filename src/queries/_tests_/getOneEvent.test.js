@@ -8,14 +8,14 @@ test("the function returns the data in the event with the id of 1", () => {
   dbBuild((error, response) => {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     expect.assertions(1);
-    return expect(getOneEvent(1)).resolves.toEqual(events[0]);
+    return expect(getOneEvent(1)).resolves.toEqual([events[0]]);
   });
 });
 
-// test("the fetch fails with an error", () => {
-//   dbBuild(function(error, response) {
-//     if (error) return console.log("ERROR IN DBBUILD: " + error);
-//     expect.assertions(1);
-//     return expect(getOneEvent("potatoes")).rejects.toMatch(error);
-//   });
-// });
+test("the fetch fails with an error", () => {
+  dbBuild((error, response) => {
+    if (error) return console.log("ERROR IN DBBUILD: " + error);
+    expect.assertions(1);
+    return expect(getOneEvent("potatoes")).rejects.toMatch(error);
+  });
+});
