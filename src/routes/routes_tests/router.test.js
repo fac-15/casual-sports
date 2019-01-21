@@ -59,3 +59,18 @@ describe("Check that making a GET request to a specific event id returns the cor
     })
   )
 });
+
+describe("Check POST request status codes", () => {
+  test("POST to /search returns 302 status code", () => supertest(app).post("/search").then((res) => {
+      expect(res.statusCode).toBe(302);
+    })
+  )
+  test("POST to /add-event returns 302 status code", () => supertest(app).post("/add-event").then((res) => {
+      expect(res.statusCode).toBe(302);
+    })
+  )
+  test("POST to /add-team returns 302 status code", () => supertest(app).post("/add-team", ).then((res) => {
+      expect(res.statusCode).toBe(302);
+    })
+  )
+});
