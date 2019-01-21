@@ -15,6 +15,7 @@ router.post("/search", (req, res) => {
 });
 
 router.post("/add-event", (req, res) => {
+  console.log("HERE IS REQ", req);
   const newEvent = req.body;
   postEventData.postEvent(newEvent);
   res.redirect(`/`);
@@ -22,7 +23,6 @@ router.post("/add-event", (req, res) => {
 
 router.post("/add-team", (req, res) => {
   const newTeam = req.body;
-  console.log(newTeam);
   postTeamData.postTeam(newTeam);
   res.redirect(`/`);
 });
