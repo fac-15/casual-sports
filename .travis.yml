@@ -1,24 +1,19 @@
+before_script:
+  - "psql --version"
+  - "psql -c 'CREATE DATABASE travis_ci_test;' -U postgres"
+  - 'psql -c "CREATE USER test WITH PASSWORD ''1234'';" -U postgres'
+  - 'psql -c "ALTER DATABASE travis_ci_test OWNER TO test;" -U postgres'
+env:
+  global:
+    - "TEST_DB_URL=postgres://test:1234@localhost:5432/travis_ci_test"
+    - CODECOV_TOKEN=65e214e6-d134-471c-b66e-fa5341b6f5c0
+install:
+  - "npm install"
+  - "npm install -g codecov"
 language: node_js
 node_js:
-  - "node"
-
-install:
-  - npm install
-  - npm install -g codecov
-
+  - node
 script:
-  - npm test
-
+  - "npm test"
 services:
   - postgresql
-
-env:
-  - TEST_DB_URL=postgres://test:1234@localhost:5432/travis_ci_test
-  global:
-  - CODECOV_TOKEN=65e214e6-d134-471c-b66e-fa5341b6f5c0
-
-before_script:
-  - psql --version
-  - psql -c 'CREATE DATABASE travis_ci_test;' -U postgres
-  - psql -c "CREATE USER test WITH PASSWORD '1234';" -U postgres
-  - psql -c "ALTER DATABASE travis_ci_test OWNER TO test;" -U postgres
