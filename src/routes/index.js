@@ -15,7 +15,6 @@ router.post("/search", (req, res) => {
 });
 
 router.post("/add-event", (req, res) => {
-  console.log("HERE IS REQ", req);
   const newEvent = req.body;
   postEventData.postEvent(newEvent);
   res.redirect(`/`);
@@ -47,7 +46,8 @@ router.get("/search-open/:table/:sport", (request, response) => {
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;
-    getAllData.searchSport(table, searchInput)
+  getAllData
+    .searchSport(table, searchInput)
     .then(result => {
       response.render("search", {
         sportsData: result,
