@@ -5,11 +5,10 @@
     <form action='/search' method='POST'>
 
         <ul class="form" id="home-form">
-            <label>Select either</label>
-            <label class="solo" for="events">Nearby events<input type="radio" id="events" name="table" value="events" checked></label>
-            <label>Or</label>
-            <label class="solo" for="teams">Nearby teams<input type="radio" id="teams" name="table" value="teams"></label>
-            <label for="search-events">And choose your sport:</label><input name='sport' type='text' id="search-events" list="sport-list" class="field-long"
+            <label for="search-events"><h3>Looking to do sports?</h3></label>
+            <label class="solo" for="events">Yeah show me what's on <input type="radio" id="events" name="table" value="events" checked></label>
+            <label class="solo" for="teams">Who can I play with/against? <input type="radio" id="teams" name="table" value="teams"></label>
+            <input name='sport' type='text' id="search-events" list="sport-list" class="field-long"
                 placeholder="Type a sport here" required />
             <datalist name= "sport-list" id="sport-list">
                 <option value="chess">
