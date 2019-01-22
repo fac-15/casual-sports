@@ -11,7 +11,7 @@
 
 body {
   background: var(--light-blue);
-  color: var(--blue); 
+  color: var(--blue);
 }
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
   font-size: 1.6em;
   padding: 0.2em;
   margin: 0 0 0 0.6em;
-  font-family: 'Knewave', cursive;
+  font-family: "Knewave", cursive;
   color: var(--light-blue);
   text-transform: uppercase;
 }
@@ -29,20 +29,20 @@ h2 {
   font-size: 6em;
   padding: 0.4em;
   text-align: center;
-  font-family: 'Knewave', cursive;
+  font-family: "Knewave", cursive;
   color: var(--blue);
 }
 
 h3 {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.8em;
   text-transform: uppercase;
   color: var(--orange);
 }
 
 a {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: var(--light-orange);
   text-decoration: none;
   font-size: 1.4em;
@@ -94,12 +94,12 @@ p {
 
 .topnav a:hover {
   background-color: var(--grey);
-  color:  rgb(0, 26, 51);
+  color: rgb(0, 26, 51);
 }
 
 .active {
   background-color: var(--orange);
-  color:  rgb(0, 26, 51);
+  color: rgb(0, 26, 51);
 }
 
 .topnav .icon {
@@ -227,7 +227,7 @@ input[type="time" i] {
   padding: 0em;
   display: block;
   font-weight: light;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.6em;
   color: var(--pink);
 }
@@ -282,7 +282,7 @@ textarea {
   padding: 0.6em;
   text-align: center;
   border: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 1.4em;
   color: var(--light-blue);
@@ -324,6 +324,18 @@ textarea {
 .teamInfoPic {
   max-width: 50%;
   margin: 0 25%;
+}
+
+/*---------------------no results page -----------------  */
+
+#noResultsGifR {
+  float: right;
+  max-width: 290px;
+}
+
+#noResultsGifL {
+  float: left;
+  max-width: 290px;
 }
 
 /* ---------------- media queries --------------- */

@@ -39,7 +39,7 @@ router.get("/search-open/:table/:sport", (request, response) => {
       response.render("search-open", { sportsData: result });
     })
     .catch(err => {
-      response.status(500).render("500");
+      response.status(302).render("no-results");
     });
 });
 
@@ -49,6 +49,7 @@ router.get("/search/:table/:sport", (request, response) => {
   getAllData
     .searchSport(table, searchInput)
     .then(result => {
+      console.log("here is search result", res);
       response.render("search", {
         sportsData: result,
         table,
@@ -56,7 +57,7 @@ router.get("/search/:table/:sport", (request, response) => {
       });
     })
     .catch(err => {
-      response.status(500).render("500");
+      response.status(302).render("no-results");
     });
 });
 
@@ -100,7 +101,7 @@ router.get("/teams/:id", (req, res) => {
       res.render("team-info", { teamData: rest });
     })
     .catch(err => {
-      res.status(err, 500).render("500");
+      res.status(404).render("404");
     });
 });
 
