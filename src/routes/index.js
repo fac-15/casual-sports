@@ -54,7 +54,6 @@ router.get("/search/:table/:sport", (request, response) => {
       });
     })
     .catch(err => {
-      console.log("IM IN THE ROUTER ERROR");
       response.status(404).render("no-results");
     });
 });

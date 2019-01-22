@@ -14,13 +14,10 @@ const searchSport = (table, sports) =>
       `SELECT * FROM ${table} WHERE sport = '${sports}'`,
       (err, res) => {
         if (err) {
-          console.log("IM HERE IN THE ERROR");
           reject(err);
         } else if (res.rows.length === 0) {
-          console.log("IM IN THE ELSE IF");
           reject(err);
         } else {
-          console.log("IM GOING INTO THE RESOLVE");
           resolve(res.rows.reverse());
         }
       }
