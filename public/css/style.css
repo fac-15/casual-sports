@@ -286,10 +286,17 @@ textarea {
   text-align: center;
 }
 
+.searchTeamPic {
+  float: left;
+  width: 50%;
+  margin-right: 2%;
+}
+
 /* -------------------team-info page------------------  */
 
-.event-list {
-  align-items: center;
+#teamInfoPic {
+  max-width: 50%;
+  margin: 0 25%;
 }
 
 /* ---------------- media queries --------------- */
