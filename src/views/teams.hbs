@@ -4,12 +4,13 @@
         <ul class="event-list">
             {{#each teamsData}}
             <li><a class="read-more" href="/teams/{{id}}">
-                    <h3>{{name}}</h2>
-                    <p>Gender: {{genders genders}}</p>
-                    <p>Skill level: {{skillz skill}} </p>
-                    <p>Age Range: {{ageRange ages}}</p>
-                    <p>Looking for team mates: {{yesOrNo solo}}</p>
-                </a></li>
+                     <img class="searchTeamPic" src={{image}} alt="Team picture">
+                    <h3>{{name}}</h2></a>
+                    <p>Gender:</p> {{genders genders}}
+                    <p>Skill level:</p> {{skillz skill}}
+                    <p>Age Range:</p> {{ageRange ages}}
+                    <p>Looking for team mates:</p> {{yesOrNo solo}}
+                </li>
             {{/each}}
         </ul>
     </section>
