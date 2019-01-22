@@ -22,7 +22,7 @@ CREATE TABLE teams (
   sport TEXT,
   solo  BOOLEAN NOT NULL DEFAULT false,
   bio TEXT,
-  image TEXT
+  image VARCHAR
 );
 
 CREATE TABLE events (
@@ -36,7 +36,7 @@ CREATE TABLE events (
   genders INTEGER,
   open BOOLEAN NOT NULL DEFAULT false,
   bio TEXT,
-  image TEXT
+  image VARCHAR
 );
 
 INSERT INTO users (team, username, password, email) VALUES
