@@ -112,5 +112,5 @@ describe("Check POST request status codes", () => {
       .send({ name: "Blub blub team", solo: true })
       .then(res => {
         expect(res.statusCode).toBe(302);
-      }));
+      }, 30000));
 });
