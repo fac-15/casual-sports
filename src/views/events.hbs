@@ -1,6 +1,14 @@
 <main class="page-content events">
     <section class="event" id="event">
-         <button onclick="location.href='/add-event'" class="button-submit" id="add">Add your own event</button>
+        <button onclick="location.href='/add-event'" class="button-submit" id="add">Add your own
+            event</button>
+        <h3>Sort by:</h3>
+        <form class="sort-form" action="/events/alpha/" method="post">
+            <button type='submit' class="sort button-submit">Alphabetically</button>
+        </form>
+        <form action="/events/date/" method="post">
+            <button type='submit' class="sort button-submit">Date</button>
+        </form>
         <ul class="event-list">
             {{#each eventsData}}
              <li><a class="read-more" href="/events/{{id}}">

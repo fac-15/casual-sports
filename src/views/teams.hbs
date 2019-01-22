@@ -1,6 +1,11 @@
 <main class="page-content teams">
     <section class="team" id="team">
-        <button onclick="location.href='/add-team'" class="button-submit" id="add">Register your team</button>
+        <button onclick="location.href='/add-team'" class="button-submit" id="add">Register your
+            team</button>
+        <h3>Sort by:</h3>
+        <form class="sort-form" action="/teams/alpha" method="post">
+            <button type='submit' class="sort button-submit">Alphabetically</button>
+        </form>
         <ul class="event-list">
             {{#each teamsData}}
             <li><a class="read-more" href="/teams/{{id}}">
