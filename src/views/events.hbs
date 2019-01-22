@@ -3,11 +3,11 @@
         <button onclick="location.href='/add-event'" class="button-submit" id="add">Add your own
             event</button>
         <h3>Sort by:</h3>
-        <form action="/events/alpha/" method="post">
-            <button type='submit' id="add" class="button-submit">Alphabetically</button>
+        <form class="sort-form" action="/events/alpha/" method="post">
+            <button type='submit' class="sort button-submit">Alphabetically</button>
         </form>
         <form action="/events/date/" method="post">
-            <button type='submit' id="add" class="button-submit">Date</button>
+            <button type='submit' class="sort button-submit">Date</button>
         </form>
         <ul class="event-list">
             {{#each eventsData}}
