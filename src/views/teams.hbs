@@ -1,13 +1,18 @@
 <main class="page-content teams">
     <section class="team" id="team">
+        <h3>Sort by:</h3>
+        <form action="/teams/alpha" method="post">
+            <button type='submit' id="add" class="button-submit">Alphabetically</button>
+        </form>
         <ul class="event-list">
             {{#each teamsData}}
             <li><a class="read-more" href="/teams/{{id}}">
                     <h3>{{name}}</h2>
-                    <p>Gender: {{genders genders}}</p>
-                    <p>Skill level: {{skillz skill}} </p>
-                    <p>Age Range: {{ageRange ages}}</p>
-                    <p>Looking for team mates: {{yesOrNo solo}}</p>
+                        <p>Sport: {{sport}}</p>
+                        <p>Gender: {{genders genders}}</p>
+                        <p>Skill level: {{skillz skill}} </p>
+                        <p>Age Range: {{ageRange ages}}</p>
+                        <p>Looking for team mates: {{yesOrNo solo}}</p>
                 </a></li>
             {{/each}}
         </ul>

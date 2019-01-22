@@ -3,5 +3,6 @@ module.exports = {
   skillz: require("./num-to-skills"),
   ageRange: require("./num-to-age"),
   yesOrNo: require("./boolean-to-string"),
-  reverseDate: require("./reverse-date.js")
-}
+  reverseDate: require("./reverse-date.js"),
+  sortDate: require("./sort-date.js")
+};
