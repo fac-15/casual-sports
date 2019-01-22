@@ -47,7 +47,6 @@ router.get("/search/:table/:sport", (request, response) => {
   getAllData
     .searchSport(table, searchInput)
     .then(result => {
-      console.log("here is search result", res);
       response.render("search", {
         sportsData: result,
         table,
@@ -55,7 +54,7 @@ router.get("/search/:table/:sport", (request, response) => {
       });
     })
     .catch(err => {
-      response.status(302).render("no-results");
+      response.status(404).render("no-results");
     });
 });
 
