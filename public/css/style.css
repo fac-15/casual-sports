@@ -29,8 +29,8 @@ h2 {
   font-size: 6em;
   padding: 0.4em;
   text-align: center;
-  font-family: "Knewave", cursive;
-  color: var(--light-orange);
+  font-family: 'Knewave', cursive;
+  color: var(--blue);
 }
 
 h3 {
@@ -70,9 +70,10 @@ li {
 p {
   font-family: "Raleway", sans-serif;
   text-align: left;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: var(--pink);
   padding: 0.2em;
+  font-weight: bold;
 }
 
 .topnav {
@@ -176,7 +177,7 @@ p {
 /* Home search styling  */
 
 #home-form {
-  max-width: 25em;
+  max-width: 35em;
 }
 
 #home-form input {
@@ -217,7 +218,7 @@ input[type="time" i] {
 
 .form {
   margin: 0 auto;
-  max-width: 30em;
+  max-width: 35em;
   padding: 0 1em 1em 2em;
 }
 
@@ -226,8 +227,8 @@ input[type="time" i] {
   padding: 0em;
   display: block;
   font-weight: light;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.4em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6em;
   color: var(--pink);
 }
 
