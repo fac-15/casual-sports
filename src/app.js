@@ -27,25 +27,6 @@ app.engine(
   })
 );
 
-app.post("/search", (req, res) => {
-  const table = req.body.table;
-  const searchInput = req.body.sport;
-  res.redirect(`/search/${table}/${searchInput}`);
-});
-
-app.post("/add-event", (req, res) => {
-  const newEvent = req.body;
-  postEventData.postEvent(newEvent);
-  res.redirect(`/`);
-});
-
-app.post("/add-team", (req, res) => {
-  const newTeam = req.body;
-  console.log(newTeam);
-  postTeamData.postTeam(newTeam);
-  res.redirect(`/`);
-});
-
 app.use(routes);
 app.set("port", process.env.PORT || 2500);
 

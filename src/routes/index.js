@@ -5,6 +5,26 @@ const router = express.Router();
 const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
+const postEventData = require("../queries/postEventData");
+const postTeamData = require("../queries/postTeamData");
+
+router.post("/search", (req, res) => {
+  const table = req.body.table;
+  const searchInput = req.body.sport;
+  res.redirect(`/search/${table}/${searchInput}`);
+});
+
+router.post("/add-event", (req, res) => {
+  const newEvent = req.body;
+  postEventData.postEvent(newEvent);
+  res.redirect(`/`);
+});
+
+router.post("/add-team", (req, res) => {
+  const newTeam = req.body;
+  postTeamData.postTeam(newTeam);
+  res.redirect(`/`);
+});
 
 router.get("/", (request, response) => {
   response.render("home");
@@ -26,7 +46,8 @@ router.get("/search-open/:table/:sport", (request, response) => {
 router.get("/search/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;
-    getAllData.searchSport(table, searchInput)
+  getAllData
+    .searchSport(table, searchInput)
     .then(result => {
       response.render("search", {
         sportsData: result,
@@ -75,7 +96,8 @@ router.get("/events/:id", (req, res) => {
 router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
     .then(result => {
-      res.render("team-info", { teamData: result });
+      const rest = result[0];
+      res.render("team-info", { teamData: rest });
     })
     .catch(err => {
       res.status(err, 500);
