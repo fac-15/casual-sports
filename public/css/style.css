@@ -294,7 +294,7 @@ textarea {
 
 /* -------------------team-info page------------------  */
 
-#teamInfoPic {
+.teamInfoPic {
   max-width: 50%;
   margin: 0 25%;
 }
