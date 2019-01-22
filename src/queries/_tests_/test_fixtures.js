@@ -1,4 +1,31 @@
 text_fixtures = {
+  event: [
+    {
+      event_date: "2019-03-09",
+      genders: 3,
+      id: 1,
+      location: "london",
+      name: "fun at the park",
+      open: true,
+      sport: "Football",
+      start_time: "12:00",
+      users_id: 1
+    }
+  ],
+  team: [
+    {
+      ages: 1,
+      genders: 3,
+      id: 1,
+      location: "london",
+      name: "fac",
+      size: 1,
+      skill: 3,
+      solo: true,
+      sport: "football",
+      user_id: 1
+    }
+  ],
   events: [
     {
       event_date: "2019-03-09",
