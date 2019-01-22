@@ -1,5 +1,6 @@
 <main class="page-content events">
     <section class="event" id="event">
+         <button onclick="location.href='/add-event'" class="button-submit" id="add">Add your own event</button>
         <ul class="event-list">
             {{#each eventsData}}
             <li><a class="read-more" href="/events/{{id}}">

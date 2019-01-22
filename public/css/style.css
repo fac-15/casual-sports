@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway|Montserrat+Subrayada|Lato");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Montserrat+Subrayada|Oswald|Knewave");
 
 :root {
   --orange: #e27d60;
@@ -6,38 +6,47 @@
   --light-orange: #e8a87c;
   --pink: #c38d9e;
   --blue: #41b3a3;
+  --grey: #ddd;
 }
 
 body {
   background: var(--light-blue);
-  color: rgb(0, 26, 51);
+  color: var(--blue); 
 }
 
 h1 {
   display: inline-block;
-  font-size: 2em;
-  padding: 0.1em;
-  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 1.6em;
+  padding: 0.2em;
+  margin: 0 0 0 0.6em;
+  font-family: 'Knewave', cursive;
+  color: var(--light-blue);
+  text-transform: uppercase;
 }
 
 h2 {
   margin: 0;
-  font-size: 3em;
+  font-size: 6em;
   padding: 0.4em;
   text-align: center;
-  font-family: "Montserrat Subrayada", sans-serif;
+  font-family: 'Knewave', cursive;
+  color: var(--light-orange);
 }
 
 h3 {
   text-align: center;
-  font-family: "Montserrat Subrayada", sans-serif;
-  font-size: 1.6em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color: var(--orange);
 }
 
 a {
-  font-family: "Raleway", sans-serif;
-  color: rgb(0, 26, 51);
+  font-family: 'Oswald', sans-serif;
+  color: var(--light-orange);
   text-decoration: none;
+  font-size: 1.4em;
+  text-transform: uppercase;
 }
 
 ul {
@@ -60,8 +69,10 @@ li {
 
 p {
   font-family: "Raleway", sans-serif;
-  text-align: center;
+  text-align: left;
   font-size: 1.2em;
+  color: var(--pink);
+  padding: 0.2em;
 }
 
 .topnav {
@@ -72,21 +83,22 @@ p {
 .topnav a {
   float: right;
   display: block;
-  color: #000000;
+  color: var(--light-blue);
   text-align: center;
   padding: 0.6em 0.8em;
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 1.2em;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: var(--grey);
+  color:  rgb(0, 26, 51);
 }
 
 .active {
   background-color: var(--orange);
-  color: rgb(0, 0, 0);
+  color:  rgb(0, 26, 51);
 }
 
 .topnav .icon {
@@ -185,7 +197,10 @@ input[type="time" i] {
   -moz-box-sizing: border-box;
   border: 0.2em solid var(--light-orange);
   padding: 1em;
-  margin: 0;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  margin-left: 0;
+  margin-right: 0;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -207,18 +222,20 @@ input[type="time" i] {
 }
 
 .form label {
-  margin: 0.6em 0 0.4em 0;
+  margin: 0.2em 0 0.6em 0;
   padding: 0em;
   display: block;
-  font-weight: regular;
-  font-family: "Raleway", sans-serif;
+  font-weight: light;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.4em;
-  color: rgb(0, 26, 51);
+  color: var(--pink);
 }
 
 .form input[type="text"],
 #age-options,
 #skill-level,
+.form input[type="url"],
+#img-url,
 .form input[type="password"],
 textarea {
   box-sizing: border-box;
@@ -226,7 +243,10 @@ textarea {
   -moz-box-sizing: border-box;
   border: 0.2em solid var(--light-orange);
   padding: 1em;
-  margin: 0;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  margin-left: 0;
+  margin-right: 0;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -261,17 +281,23 @@ textarea {
   padding: 0.6em;
   text-align: center;
   border: none;
-  color: #fff;
-  font-family: "Montserrat Subrayada", sans-serif;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
   font-size: 1.4em;
-  color: rgb(0, 26, 51);
+  color: var(--light-blue);
 }
 
-.button-submit :hover {
-  background: #4691a4;
+.button-submit:hover {
+  background: var(--blue);
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+#add {
+  position: absolute;
+  top: 3em;
+  right: 2em;
 }
 
 /* --------------------events page-------------------- */
