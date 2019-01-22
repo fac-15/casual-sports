@@ -60,3 +60,16 @@ As a user, I can:
 ![whatsapp image 2019-01-08 at 17 56 50](https://user-images.githubusercontent.com/16784959/50853865-651fd180-137b-11e9-9eb1-52cca0eb975d.jpeg)
 
 ![whatsapp image 2019-01-08 at 17 57 57](https://user-images.githubusercontent.com/16784959/50853869-681ac200-137b-11e9-89cd-b434e3d59b58.jpeg)
+
+
+## Contributing
+
+We welcome any additions help. This guidance is for those wishing to support the current course facilitator by adding bug fixes, features or enhancements to the site.
+
+## Our Tech Stack
+
+:computer: Handlebars
+:information_desk_person: Express\
+:heart_eyes_cat: Babel\
+:relieved: Jest,  Supertest and Codecov\
+:bulb: ESLint / Prettier\
