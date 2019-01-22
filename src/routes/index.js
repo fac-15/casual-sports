@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-// const helpers = require('../views/helpers/index.js');
-// const reset = require('../database/build_test.js');
 const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
@@ -71,10 +69,60 @@ router.get("/events", (request, response) => {
     });
 });
 
+router.post("/events/date", (request, response) => {
+  getAllData
+    .getTableData("events")
+    .then(result => {
+      result.sort((a, b) => {
+        const keyA = new Date(a.event_date),
+          keyB = new Date(b.event_date);
+        if (keyA < keyB) return -1;
+        if (keyA > keyB) return 1;
+        return 0;
+      });
+      response.render("events", { eventsData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
+    });
+});
+
+router.post("/events/alpha/", (request, response) => {
+  getAllData
+    .getTableData("events")
+    .then(result => {
+      result.sort((a, b) => {
+        const textA = a.name.toUpperCase();
+        const textB = b.name.toUpperCase();
+        return textA < textB ? -1 : textA > textB ? 1 : 0;
+      });
+      response.render("events", { eventsData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
+    });
+});
+
 router.get("/teams", (request, response) => {
   getAllData
     .getTableData("teams")
     .then(result => {
+      response.render("teams", { teamsData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
+    });
+});
+
+router.post("/teams/alpha/", (request, response) => {
+  getAllData
+    .getTableData("teams")
+    .then(result => {
+      result.sort((a, b) => {
+        const textA = a.name.toUpperCase();
+        const textB = b.name.toUpperCase();
+        return textA < textB ? -1 : textA > textB ? 1 : 0;
+      });
       response.render("teams", { teamsData: result });
     })
     .catch(err => {
