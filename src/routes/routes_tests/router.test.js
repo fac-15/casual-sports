@@ -20,12 +20,15 @@ describe("Check that router GET calls return the appropriate status codes", () =
         done();
       });
   });
-  // test("GET to anaconda should return status 404", () =>
-  //   supertest(app)
-  //     .get("/anaconda")
-  //     .then(res => {
-  //       expect(res.statusCode).toBe(404);
-  //     }));
+  test("GET to anaconda should return status 404", done => {
+    expect.assertions(1);
+    supertest(app)
+      .get("/anaconda")
+      .then(res => {
+        expect(res.statusCode).toBe(404);
+        done();
+      });
+  });
   // test("GET to /search/teams/football should return status 200", () =>
   //   supertest(app)
   //     .get("/search/teams/football")
