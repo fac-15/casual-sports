@@ -39,7 +39,7 @@ router.get("/search-open/:table/:sport", (request, response) => {
       response.render("search-open", { sportsData: result });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(500).render("500");
     });
 });
 
@@ -56,7 +56,7 @@ router.get("/search/:table/:sport", (request, response) => {
       });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(500).render("500");
     });
 });
 
@@ -67,7 +67,7 @@ router.get("/events", (request, response) => {
       response.render("events", { eventsData: result });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(500).render("500");
     });
 });
 
@@ -78,7 +78,7 @@ router.get("/teams", (request, response) => {
       response.render("teams", { teamsData: result });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(500).render("500");
     });
 });
 
@@ -89,7 +89,7 @@ router.get("/events/:id", (req, res) => {
       res.render("event-info", { eventInfo: rest });
     })
     .catch(err => {
-      res.status(err, 500);
+      res.status(500).render("500");
     });
 });
 
@@ -100,7 +100,7 @@ router.get("/teams/:id", (req, res) => {
       res.render("team-info", { teamData: rest });
     })
     .catch(err => {
-      res.status(err, 500);
+      res.status(err, 500).render("500");
     });
 });
 
@@ -122,6 +122,10 @@ router.get("/add-team", (req, res) => {
 
 router.get("/login", (req, res) => {
   res.render("login");
+});
+
+router.get("/*", (req, res) => {
+  res.status(404).render("404");
 });
 
 module.exports = router;
