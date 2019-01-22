@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  margin: 0em 0 0.5em 0;
+  margin: 0;
   font-size: 3em;
   padding: 0.4em;
   text-align: center;
@@ -31,7 +31,7 @@ h2 {
 h3 {
   text-align: center;
   font-family: 'Montserrat Subrayada', sans-serif; 
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 a {
@@ -61,7 +61,7 @@ li {
 p {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-size: 1.4em;  
+  font-size: 1.2em;  
 }
 
 .topnav {
@@ -103,8 +103,13 @@ p {
 
 /* -------------------spreading divs------------- */
 
+.spread-wrap {
+  overflow: hidden;
+  min-height: 24vw;
+}
+
 .spread {
-  transform: translate(-35em) rotate(-45deg);
+  transform: translate(-45em) rotate(-45deg);
 }
 
 .spread > div:nth-child(1) {
@@ -200,7 +205,7 @@ input[type="time" i] {
 .form {
   margin: 0 auto;
   max-width: 30em;
-  padding: 2em 1em 1em 2em;
+  padding: 0 1em 1em 2em;
 }
 
 .form label {
