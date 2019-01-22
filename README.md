@@ -63,3 +63,13 @@ As a user, I can:
 
 
 ## Contributing
+
+We welcome any additions help. This guidance is for those wishing to support the current course facilitator by adding bug fixes, features or enhancements to the site.
+
+## Our Tech Stack
+
+:computer: Handlebars
+:information_desk_person: Express\
+:heart_eyes_cat: Babel\
+:relieved: Jest,  Supertest and Codecov\
+:bulb: ESLint / Prettier\
