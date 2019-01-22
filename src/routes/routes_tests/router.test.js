@@ -20,12 +20,12 @@ describe("Check that router GET calls return the appropriate status codes", () =
         done();
       });
   });
-  // test("GET to anaconda should return status 404", () =>
-  //   supertest(app)
-  //     .get("/anaconda")
-  //     .then(res => {
-  //       expect(res.statusCode).toBe(404);
-  //     }));
+  test("GET to anaconda should return status 404", () =>
+    supertest(app)
+      .get("/anaconda")
+      .then(res => {
+        expect(res.statusCode).toBe(404);
+      }));
   // test("GET to /search/teams/football should return status 200", () =>
   //   supertest(app)
   //     .get("/search/teams/football")
@@ -44,18 +44,18 @@ describe("Check that router GET calls return the appropriate status codes", () =
   //     .then(res => {
   //       expect(res.statusCode).toBe(200);
   //     }));
-  // test("GET to /add-event should return status 200", () =>
-  //   supertest(app)
-  //     .get("/add-event")
-  //     .then(res => {
-  //       expect(res.statusCode).toBe(200);
-  //     }));
-  // test("GET to /add-team should return status 200", () =>
-  //   supertest(app)
-  //     .get("/add-team")
-  //     .then(res => {
-  //       expect(res.statusCode).toBe(200);
-  //     }));
+  test("GET to /add-event should return status 200", () =>
+    supertest(app)
+      .get("/add-event")
+      .then(res => {
+        expect(res.statusCode).toBe(200);
+      }));
+  test("GET to /add-team should return status 200", () =>
+    supertest(app)
+      .get("/add-team")
+      .then(res => {
+        expect(res.statusCode).toBe(200);
+      }));
 });
 
 // describe("Check that making a GET request to a specific team id returns the correct team", () => {
