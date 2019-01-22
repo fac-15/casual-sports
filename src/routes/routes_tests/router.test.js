@@ -11,12 +11,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // const event21name = "Bamity";
 
 describe("Check that router GET calls return the appropriate status codes", () => {
-  test("GET to home should return status 200", () =>
+  test("GET to home should return status 200", done => {
+    expect.assertions(1);
     supertest(app)
       .get("/")
       .then(res => {
         expect(res.statusCode).toBe(200);
-      }));
+        done();
+      });
+  });
   // test("GET to anaconda should return status 404", () =>
   //   supertest(app)
   //     .get("/anaconda")
