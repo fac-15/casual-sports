@@ -11,12 +11,14 @@
 
 body {
   background: var(--light-blue);
-  color: var(--blue);
+  color: var(--orange);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
 }
 
 h1 {
   display: inline-block;
-  font-size: 1.6em;
+  font-size: 1.4em;
   padding: 0.2em;
   margin: 0 0 0 0.6em;
   font-family: "Knewave", cursive;
@@ -25,9 +27,9 @@ h1 {
 }
 
 h2 {
-  margin: 0;
-  font-size: 6em;
-  padding: 0.4em;
+  margin: 0 auto;
+  font-size: 4.5em;
+  padding: 0em;
   text-align: center;
   font-family: "Knewave", cursive;
   color: var(--blue);
@@ -36,7 +38,7 @@ h2 {
 h3 {
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-transform: uppercase;
   color: var(--orange);
 }
@@ -45,7 +47,7 @@ a {
   font-family: "Oswald", sans-serif;
   color: var(--light-orange);
   text-decoration: none;
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-transform: uppercase;
 }
 
@@ -71,9 +73,10 @@ p {
   font-family: "Raleway", sans-serif;
   text-align: left;
   font-size: 1.4em;
+  font-weight: bold;
   color: var(--pink);
   padding: 0.2em;
-  font-weight: bold;
+  width: auto;
 }
 
 .topnav {
@@ -121,7 +124,7 @@ p {
 }
 
 .spread {
-  transform: translate(-45em) rotate(-45deg);
+  transform: translate(-42em) rotate(-45deg);
 }
 
 .spread > div:nth-child(1) {
@@ -295,10 +298,20 @@ textarea {
   -webkit-box-shadow: none;
 }
 
+.sort-form {
+  display: block;
+  margin: 0 auto;
+}
+
 #add {
   position: absolute;
   top: 3em;
   right: 2em;
+}
+
+.sort {
+  display: flex;
+  margin: 0.4em auto;
 }
 
 /* --------------------events page-------------------- */
