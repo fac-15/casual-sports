@@ -11,7 +11,7 @@
 
 body {
   background: var(--light-blue);
-  color: var(--orange); 
+  color: var(--orange);
   font-family: "Raleway", sans-serif;
   font-size: 1.1rem;
 }
@@ -31,13 +31,13 @@ h2 {
   font-size: 4.5em;
   padding: 0em;
   text-align: center;
-  font-family: 'Knewave', cursive;
+  font-family: "Knewave", cursive;
   color: var(--blue);
 }
 
 h3 {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.6em;
   text-transform: uppercase;
   color: var(--orange);
@@ -230,7 +230,7 @@ input[type="time" i] {
   padding: 0em;
   display: block;
   font-weight: light;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.6em;
   color: var(--pink);
 }
@@ -337,6 +337,18 @@ textarea {
 .teamInfoPic {
   max-width: 50%;
   margin: 0 25%;
+}
+
+/*---------------------no results page -----------------  */
+
+#noResultsGifR {
+  float: right;
+  max-width: 290px;
+}
+
+#noResultsGifL {
+  float: left;
+  max-width: 290px;
 }
 
 /* ---------------- media queries --------------- */
