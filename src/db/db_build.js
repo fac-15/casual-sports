@@ -4,6 +4,7 @@ const sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
 
 const dbBuilder = cb => dbConnection.query(sql, cb);
 
-dbBuilder();
+//uncomment to run in command line
+// dbBuilder();
 
 module.exports = dbBuilder;
