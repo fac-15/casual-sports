@@ -308,6 +308,12 @@ textarea {
   right: 2em;
 }
 
+#sign-up-button {
+  position: absolute;
+  top: 3em;
+  right: 2em;
+}
+
 .sort {
   display: flex;
   margin: 0.4em auto;
