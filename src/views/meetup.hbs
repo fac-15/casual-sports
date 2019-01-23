@@ -1,13 +1,21 @@
 <main class="page-content events">
     <section class="event" id="event">
         <ul class="event-list">
+            <h3>Upcoming sports event in London</h3>
             {{#each meetupData}}
-            <li><a class="read-more" href="{{event_url}}">
+            <li><a class="read-more" target="_blank" href="{{event_url}}">
+                    {{#if group.group_photo}}
+                    <img class="searchTeamPic" src={{group.group_photo.photo_link}} alt="Team picture" />
+                    {{else}}
+                    <img class="meetupPic" src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg"
+                        alt="Team picture" />
+                    {{/if}}
                     <h3>{{name}}</h3>
-                    <p>Bio: {{removeTags description}}</p>
-                    <p>Number of people attending: {{yes_rsvp_count}}</p>
-                    <p>Number currently attending: {{headcount}}</p>
                 </a>
+                <p>Bio: {{removeTags description}}</p>
+                <p>Number of people attending: {{yes_rsvp_count}}</p>
+                <p>Date: {{numToDate time}}</p>
+
             </li>
             {{/each}}
         </ul>
