@@ -5,9 +5,6 @@ const drop = fs.readFileSync(`${__dirname}/drop.sql`).toString();
 const empty = fs.readFileSync(`${__dirname}/empty.sql`).toString();
 const schema = fs.readFileSync(`${__dirname}/schema.sql`).toString();
 
-// using cb to db
-//const dbBuilder = cb => dbConnection.query(sql, cb);
-
 const promiseDropDb = () =>
   new Promise((resolve, reject) => {
     dbConnection.query(drop, (err, res) => {
@@ -40,12 +37,6 @@ const promiseEmptyDb = () =>
     });
   });
 
-// const refresh = async () => {
-//   promiseDropDb();
-// };
-// refresh().catch(error => {
-//   console.log(error);
-// });
 const refresh = async () => {
   try {
     await promiseDropDb();
