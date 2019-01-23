@@ -38,18 +38,18 @@ describe("Check that router GET calls return the appropriate status codes", () =
   //     .then(res => {
   //       expect(res.statusCode).toBe(200);
   //     }));
-  test("GET to /search-open/events/rugby should return status 200", () =>
+  // test("GET to /search-open/events/rugby should return status 302", () =>
+  //   supertest(app)
+  //     .get("/search-open/events/rugby")
+  //     .then(res => {
+  //       expect(res.statusCode).toBe(302);
+  //     }));
+  test("GET to /add-event should return status 200", () =>
     supertest(app)
-      .get("/search-open/events/rugby")
+      .get("/add-event")
       .then(res => {
         expect(res.statusCode).toBe(200);
       }));
-  // test("GET to /add-event should return status 200", () =>
-  //   supertest(app)
-  //     .get("/add-event")
-  //     .then(res => {
-  //       expect(res.statusCode).toBe(200);
-  //     }));
   // test("GET to /add-team should return status 200", () =>
   //   supertest(app)
   //     .get("/add-team")
