@@ -8,22 +8,22 @@
 
                   <li><a class="read-more" href="/events/{{id}}">
                           <img class="searchTeamPic" src={{image}} alt="">
-                          <h3>{{name}}</h3>
-                          <p>Date: {{reverseDate event_date}}</p>
-                          <p>Sport: {{sport}}</p>
-                          <p>Location: {{location}}</p>
-                          <p>Open for walk-in participants: {{yesOrNo open}}</p>
-                      </a></li>
+                          <h3>{{name}}</h3></a>
+                          <h5>Date & Time: {{reverseDate event_date}} {{start_time}}</h5>
+                          <h5>We're playing: {{sport}}</p>
+                          <h5>Location: {{location}}</h5>
+                          <h5>Open for walk-in participants: {{yesOrNo open}}</h5>
+                      </li>
                  {{else}}
                  {{#if solo}}
                         <li><a class="read-more" href="/teams/{{id}}">
                         <img class="searchTeamPic" src={{image}} alt="">
-                        <h3>{{name}}</h3>
-                        <p>Gender: {{genders genders}}</p>
-                        <p>Skill level: {{skillz skill}} </p>
-                        <p>Age Range: {{ageRange ages}}</p>
-                        <p>Looking for team mates: {{yesOrNo solo}}</p>
-                        </a></li>
+                        <h3>{{name}}</h3></a>
+                        <h5>We're playing: {{sport}}</h5>
+                        <h5>Gender: {{genders genders}}</h5>
+                        <h5>Age Range: {{ageRange ages}}</h5>
+                        <h5>Looking for team mates: {{yesOrNo solo}}</h5>
+                        </li>
                 {{/if}}
                 {{/if}}
                 {{/each}}

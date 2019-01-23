@@ -17,13 +17,22 @@ body {
 }
 
 h1 {
-  display: inline-block;
   font-size: 1.4em;
-  padding: 0.2em;
-  margin: 0 0 0 0.6em;
   font-family: "Knewave", cursive;
   color: var(--light-blue);
   text-transform: uppercase;
+}
+
+h1:hover {
+  color: black;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 0.15em !important;
+  padding-bottom: 0.32em !important;
 }
 
 h2 {
@@ -38,9 +47,36 @@ h2 {
 h3 {
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 1.6em;
+  font-size: 1.4em;
+  padding-bottom: 0.6em;
   text-transform: uppercase;
   color: var(--orange);
+}
+
+
+h4 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  padding-bottom: 0.6em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+h5 {
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  color: black;
+  padding: 0.1em;
+}
+
+h6 {
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  color: black;
+  padding: 0.2em;
 }
 
 a {
@@ -70,9 +106,11 @@ li {
 }
 
 p {
+  position: relative;
   font-family: "Raleway", sans-serif;
-  text-align: left;
-  font-size: 1.2em;
+  float: right;
+  font-size: 1.08em;
+  max-width: 50%;
   color: black;
   padding: 0.2em;
   width: auto;
@@ -170,6 +208,11 @@ p {
   font-weight: normal;
   font-size: 1em;
   padding: 0.4em;
+  max-width: 45%;
+}
+
+.solo2 {
+  text-align: right;
 }
 
 .gender-span {
@@ -317,6 +360,7 @@ textarea {
 .sort {
   display: flex;
   margin: 0.4em auto;
+  font-size: 1em;
 }
 
 /* --------------------events page-------------------- */
@@ -333,7 +377,7 @@ textarea {
 
 .searchTeamPic {
   float: left;
-  width: 50%;
+  width: 45%;
   margin-right: 2%;
 }
 
@@ -341,9 +385,10 @@ textarea {
 
 .meetupPic {
   float: left;
-  width: 50%;
-  height: 14em;
+  width: 40%;
   margin-right: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding: 2%;
   background-color: white;
 }
@@ -359,12 +404,12 @@ textarea {
 
 #noResultsGifR {
   float: right;
-  max-width: 290px;
+  max-width: 15%;
 }
 
 #noResultsGifL {
   float: left;
-  max-width: 290px;
+  max-width: 15%;
 }
 
 /* ---------------- media queries --------------- */
@@ -393,4 +438,58 @@ textarea {
     display: block;
     text-align: left;
   }
+
+  .active {
+    color: transparent !important;
+  }
+
+  ul {
+    padding-top: 0.5em;
+    max-width: 100%;
+  }
+
+  li {
+    margin: 0.6em;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.4em;
+    padding-top: 0em;
+  }
+
+  h5 {
+    text-align: right;
+    font-size: 1em;
+  }
+  
+  h6 {
+    font-size: 1em;
+  }
+
+  p {
+    text-align: right;
+    max-width: 60%;
+    font-size: 1em;
+  }
+
+  .spread-wrap {
+    display: none;
+  }
+
+  #add {
+    position: relative;
+    top: 1em;
+    left: 1em;
+  }
+  
+  .button-submit {
+    font-size: 0.8em;
+  }
+
+  .sort {
+    position: relative;
+  }
+
 }
