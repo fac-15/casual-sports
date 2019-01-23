@@ -8,6 +8,7 @@ const postTeamData = require("../queries/postTeamData");
 const { sign, verify } = require('jsonwebtoken');
 const postUser = require("../queries/userSignUp");
 const getMeetupApi = require("../queries/getMeeupApi");
+const cookieParser = require('cookie-parser');
 
 
 router.post("/search", (req, res) => {
@@ -208,10 +209,6 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/logout", (req, res) => {
-    if (err) {
-      res.statusCode = 500;
-      res.send("Error");
-    }
   res.clearCookie("cookie");
   res.redirect("/")
 });
