@@ -33,11 +33,10 @@ router.get("/", (request, response) => {
   getUniqueSports()
     .then(result => {
       result.forEach(row => row.sport.toString());
-      response.render("home", { sports: result });
+      response.status(200).render("home", { sports: result });
     })
     .catch(err => {
-      response.status(302).render("no-results");
-      //response.render("home");
+      response.status(200).render("home");
     });
 });
 

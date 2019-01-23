@@ -15,14 +15,19 @@
             <input name='sport' type='text' id="search-events" list="sport-list" class="field-long" placeholder="Type a sport here"
                 required />
             <datalist name="sport-list" id="sport-list">
+                {{#if sports}}
                 {{#each sports}}
                 <option value={{sport}} />
-                {{!-- <option value="checkers">
+                {{/each}}
+                {{else}}
+                <option value="tennis">
                 <option value="volleyball">
-                <option value="water polo">
+                <option value="water-polo">
+                <option value="ice-hockey">
                 <option value="rugby">
-                <option value="football"> --}}
-                    {{/each}}
+                <option value="football">
+                    {{/if}}
+
             </datalist>
             <button type="submit" id="home-submit" class="button-submit">Search</button>
 
