@@ -1,5 +1,5 @@
 # Casual Sports :runner: 
-[![Build Status](https://travis-ci.com/fac-15/casual-sports.svg?branch=staging)](https://travis-ci.com/fac-15/casual-sports) <img src="https://media.giphy.com/media/t58dlbfM3LabS/giphy.gif" style=" width: 150px; ">
+[![Build Status](https://travis-ci.com/fac-15/casual-sports.svg?branch=staging)](https://travis-ci.com/fac-15/casual-sports) <img src="https://media.giphy.com/media/t58dlbfM3LabS/giphy.gif" style=" width: 150px; ">[![codecov](https://codecov.io/gh/fac-15/casual-sports/branch/staging/graph/badge.svg)](https://codecov.io/gh/fac-15/casual-sports)
 
 An app to connect commitmentphobes and chillers who want to play sports.
 
