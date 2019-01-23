@@ -231,7 +231,8 @@ input[type="time" i] {
   font-weight: light;
   font-family: "Oswald", sans-serif;
   font-size: 1.6em;
-  color: var(--pink);
+  color: var(--blue);
+  text-shadow: 0.01em 0.01em black;
 }
 
 .form input[type="text"],
@@ -240,6 +241,7 @@ input[type="time" i] {
 .form input[type="url"],
 #img-url,
 .form input[type="password"],
+.form input[type="email"],
 textarea {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -309,9 +311,7 @@ textarea {
 }
 
 #sign-up-button {
-  position: absolute;
-  top: 3em;
-  right: 2em;
+  background-color: var(--pink);
 }
 
 .sort {
