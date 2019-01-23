@@ -9,6 +9,7 @@ const { sign, verify } = require('jsonwebtoken');
 const postUser = require("../queries/userSignUp");
 const getMeetupApi = require("../queries/getMeeupApi");
 
+
 router.post("/search", (req, res) => {
   const table = req.body.table;
   const searchInput = req.body.sport;
