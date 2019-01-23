@@ -5,11 +5,11 @@ const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
 const postEventData = require("../queries/postEventData");
 const postTeamData = require("../queries/postTeamData");
-const { sign, verify } = require('jsonwebtoken');
+const { sign, verify } = require("jsonwebtoken");
 const postUser = require("../queries/userSignUp");
 const getMeetupApi = require("../queries/getMeeupApi");
-const cookieParser = require('cookie-parser');
-
+const getUniqueSports = require("../queries/getUniqueSports");
+const cookieParser = require("cookie-parser");
 
 router.post("/search", (req, res) => {
   const table = req.body.table;
@@ -30,7 +30,14 @@ router.post("/add-team", (req, res) => {
 });
 
 router.get("/", (request, response) => {
-  response.render("home");
+  getUniqueSports()
+    .then(result => {
+      result.forEach(row => row.sport.toString());
+      response.status(200).render("home", { sports: result });
+    })
+    .catch(err => {
+      response.status(200).render("home");
+    });
 });
 
 router.get("/search-open/:table/:sport", (request, response) => {
@@ -183,36 +190,33 @@ router.post("/sign-up", (req, res) => {
   postUser.postDataUser(team, username, password, email, (err, result) => {
     if (err) console.log(err);
     else res.redirect("/login");
-    })
+  });
 });
-
 
 router.get("/add-event", (req, res) => {
   if (req.cookies.cookie) {
     res.render("add-event");
-   } else {
-    res.redirect('/login');
-   }
- });
-
+  } else {
+    res.redirect("/login");
+  }
+});
 
 router.get("/add-team", (req, res) => {
   if (req.cookies.cookie) {
     res.render("add-team");
   } else {
-    res.redirect('/login');
-   }
- });
- 
+    res.redirect("/login");
+  }
+});
+
 router.get("/login", (req, res) => {
   res.render("login");
 });
 
 router.get("/logout", (req, res) => {
   res.clearCookie("cookie");
-  res.redirect("/")
+  res.redirect("/");
 });
-
 
 router.get("/*", (req, res) => {
   res.status(404).render("404");

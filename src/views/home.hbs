@@ -1,24 +1,35 @@
-    <div class="spread-wrap">
+<div class="spread-wrap">
     {{> stripes}}
-    </div>
+</div>
 <section id="search-home" title="search-home">
     <form action='/search' method='POST'>
 
         <ul class="form" id="home-form">
-            <label for="search-events"><h3>Looking to do sports?</h3></label>
-            <label class="solo" for="events">Show me events<input type="radio" id="events" name="table" value="events" checked></label>
-            <label class="solo2" for="teams">Search for teams<input type="radio" id="teams" name="table" value="teams"></label>
-            <input name='sport' type='text' id="search-events" list="sport-list" class="field-long"
-                placeholder="Type a sport here" required />
-            <datalist name= "sport-list" id="sport-list">
-                <option value="chess">
-                <option value="checkers">
+            <label for="search-events">
+                <h3>Looking to do sports?</h3>
+            </label>
+            <label class="solo" for="events">Show me what events are on<input type="radio" id="events" name="table"
+                    value="events" checked></label>
+            <label class="solo" for="teams">Which teams can I play with/against? <input type="radio" id="teams" name="table"
+                    value="teams"></label>
+            <input name='sport' type='text' id="search-events" list="sport-list" class="field-long" placeholder="Type a sport here"
+                required />
+            <datalist name="sport-list" id="sport-list">
+                {{#if sports}}
+                {{#each sports}}
+                <option value={{sport}} />
+                {{/each}}
+                {{else}}
+                <option value="tennis">
                 <option value="volleyball">
-                <option value="water polo">
+                <option value="water-polo">
+                <option value="ice-hockey">
                 <option value="rugby">
                 <option value="football">
+                    {{/if}}
+
             </datalist>
-                  <button  type="submit" id="home-submit" class="button-submit">Search</button>
+            <button type="submit" id="home-submit" class="button-submit">Search</button>
 
         </ul>
     </form>
