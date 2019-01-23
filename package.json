@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --forceExit --detectOpenHandles --coverage && NODE_ENV='test'",
+    "test": "NODE_ENV='test' jest --forceExit --detectOpenHandles --coverage --runInBand",
     "start": "node src/index.js",
     "pretest": "eslint --ignore-path .gitignore .",
     "dev": "nodemon src/index.js"
@@ -45,6 +45,9 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "fs": "0.0.1-security",
+    "handlebars-helpers": "^0.10.0",
+    "i": "^0.3.6",
+    "npm": "^6.6.0",
     "pg": "^7.8.0",
     "pg-promise": "^8.5.4",
     "regenerator-runtime": "^0.13.1",

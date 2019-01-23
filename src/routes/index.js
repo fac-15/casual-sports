@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-// const helpers = require('../views/helpers/index.js');
-// const reset = require('../database/build_test.js');
 const getAllData = require("../queries/getAllData");
 const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
@@ -39,7 +37,7 @@ router.get("/search-open/:table/:sport", (request, response) => {
       response.render("search-open", { sportsData: result });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(302).render("no-results");
     });
 });
 
@@ -56,7 +54,7 @@ router.get("/search/:table/:sport", (request, response) => {
       });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(404).render("no-results");
     });
 });
 
@@ -67,7 +65,41 @@ router.get("/events", (request, response) => {
       response.render("events", { eventsData: result });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(500).render("500");
+    });
+});
+
+router.post("/events/date", (request, response) => {
+  getAllData
+    .getTableData("events")
+    .then(result => {
+      result.sort((a, b) => {
+        const keyA = new Date(a.event_date),
+          keyB = new Date(b.event_date);
+        if (keyA < keyB) return -1;
+        if (keyA > keyB) return 1;
+        return 0;
+      });
+      response.render("events", { eventsData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
+    });
+});
+
+router.post("/events/alpha/", (request, response) => {
+  getAllData
+    .getTableData("events")
+    .then(result => {
+      result.sort((a, b) => {
+        const textA = a.name.toUpperCase();
+        const textB = b.name.toUpperCase();
+        return textA < textB ? -1 : textA > textB ? 1 : 0;
+      });
+      response.render("events", { eventsData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
     });
 });
 
@@ -78,7 +110,23 @@ router.get("/teams", (request, response) => {
       response.render("teams", { teamsData: result });
     })
     .catch(err => {
-      response.status(err, 500);
+      response.status(500).render("500");
+    });
+});
+
+router.post("/teams/alpha/", (request, response) => {
+  getAllData
+    .getTableData("teams")
+    .then(result => {
+      result.sort((a, b) => {
+        const textA = a.name.toUpperCase();
+        const textB = b.name.toUpperCase();
+        return textA < textB ? -1 : textA > textB ? 1 : 0;
+      });
+      response.render("teams", { teamsData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
     });
 });
 
@@ -89,7 +137,7 @@ router.get("/events/:id", (req, res) => {
       res.render("event-info", { eventInfo: rest });
     })
     .catch(err => {
-      res.status(err, 500);
+      res.status(500).render("500");
     });
 });
 
@@ -100,7 +148,7 @@ router.get("/teams/:id", (req, res) => {
       res.render("team-info", { teamData: rest });
     })
     .catch(err => {
-      res.status(err, 500);
+      res.status(404).render("404");
     });
 });
 
@@ -122,6 +170,10 @@ router.get("/add-team", (req, res) => {
 
 router.get("/login", (req, res) => {
   res.render("login");
+});
+
+router.get("/*", (req, res) => {
+  res.status(404).render("404");
 });
 
 module.exports = router;

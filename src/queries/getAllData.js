@@ -8,13 +8,18 @@ const getTableData = tableName =>
     });
   });
 
-const searchSport = (table, sports) => new Promise((resolve, reject) => {
+const searchSport = (table, sports) =>
+  new Promise((resolve, reject) => {
     dbConnection.query(
       `SELECT * FROM ${table} WHERE sport = '${sports}'`,
       (err, res) => {
-        if (err) reject(err);
-        else if (res.rows.length === 0) resolve("no results");
-        else resolve(res.rows.reverse());
+        if (err) {
+          reject(err);
+        } else if (res.rows.length === 0) {
+          reject(err);
+        } else {
+          resolve(res.rows.reverse());
+        }
       }
     );
   });
