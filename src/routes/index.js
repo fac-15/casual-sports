@@ -5,12 +5,9 @@ const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
 const postEventData = require("../queries/postEventData");
 const postTeamData = require("../queries/postTeamData");
-<<<<<<< HEAD
 const { sign, verify } = require('jsonwebtoken');
 const postUser = require("../queries/userSignUp");
-=======
 const getMeetupApi = require("../queries/getMeeupApi");
->>>>>>> a658487e72989f3f6d807ad84acc62685a53c3d5
 
 router.post("/search", (req, res) => {
   const table = req.body.table;

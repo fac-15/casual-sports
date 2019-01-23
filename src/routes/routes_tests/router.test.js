@@ -44,20 +44,21 @@ describe("Check that router GET calls return the appropriate status codes", () =
   //     .then(res => {
   //       expect(res.statusCode).toBe(200);
   //     }));
-<<<<<<< HEAD
+
   test("GET to /events should return status 200", () =>
     supertest(app)
       .get("/events")
       .then(res => {
         expect(res.statusCode).toBe(200);
       }));
+
   test("GET to /teams should return status 200", () =>
     supertest(app)
       .get("/teams")
       .then(res => {
         expect(res.statusCode).toBe(200);
       }));
-=======
+
   // test("GET to /add-event should return status 200", () =>
   //   supertest(app)
   //     .get("/add-event")
@@ -70,7 +71,6 @@ describe("Check that router GET calls return the appropriate status codes", () =
   //     .then(res => {
   //       expect(res.statusCode).toBe(200);
   //     }));
->>>>>>> a658487e72989f3f6d807ad84acc62685a53c3d5
 });
 
 // describe("Check that making a GET request to a specific team id returns the correct team", () => {
