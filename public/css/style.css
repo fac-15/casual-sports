@@ -342,6 +342,7 @@ textarea {
 .meetupPic {
   float: left;
   width: 50%;
+  height: 14em;
   margin-right: 2%;
   padding: 2%;
   background-color: white;
