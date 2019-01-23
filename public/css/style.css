@@ -337,6 +337,16 @@ textarea {
   margin-right: 2%;
 }
 
+/*---------------------  meetup pic ----------------- */
+
+.meetupPic {
+  float: left;
+  width: 50%;
+  margin-right: 2%;
+  padding: 2%;
+  background-color: white;
+}
+
 /* -------------------team-info page------------------  */
 
 .teamInfoPic {
