@@ -5,6 +5,8 @@ const getOneTeam = require("../queries/getOneTeam");
 const getOneEvent = require("../queries/getOneEvent");
 const postEventData = require("../queries/postEventData");
 const postTeamData = require("../queries/postTeamData");
+const { sign, verify } = require('jsonwebtoken');
+const postUser = require("../queries/userSignUp");
 
 router.post("/search", (req, res) => {
   const table = req.body.table;
@@ -160,17 +162,48 @@ router.get("/sign-up", (req, res) => {
   res.render("sign-up");
 });
 
-router.get("/add-event", (req, res) => {
-  res.render("add-event");
+router.post("/sign-up", (req, res) => {
+  const username = req.body.username;
+  const password = req.body.password;
+  const email = req.body.email;
+  const team = req.body.team;
+  postUser.postDataUser(team, username, password, email, (err, result) => {
+    if (err) console.log(err);
+    else res.redirect("/login");
+    })
 });
+
+
+router.get("/add-event", (req, res) => {
+  if (req.cookies.cookie) {
+    res.render("add-event");
+   } else {
+    res.redirect('/login');
+   }
+ });
+
 
 router.get("/add-team", (req, res) => {
-  res.render("add-team");
-});
-
+  if (req.cookies.cookie) {
+    res.render("add-team");
+  } else {
+    res.redirect('/login');
+   }
+ });
+ 
 router.get("/login", (req, res) => {
   res.render("login");
 });
+
+router.get("/logout", (req, res) => {
+    if (err) {
+      res.statusCode = 500;
+      res.send("Error");
+    }
+  res.clearCookie("cookie");
+  res.redirect("/")
+});
+
 
 router.get("/*", (req, res) => {
   res.status(404).render("404");

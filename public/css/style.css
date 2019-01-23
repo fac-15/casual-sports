@@ -72,9 +72,8 @@ li {
 p {
   font-family: "Raleway", sans-serif;
   text-align: left;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: var(--pink);
+  font-size: 1.2em;
+  color: black;
   padding: 0.2em;
   width: auto;
 }

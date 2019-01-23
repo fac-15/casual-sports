@@ -5,10 +5,14 @@
 
             <h3>Sign up</h3>
             <ul class="form" id="login-form">
-                <label for="name-of-user">Name</label><input pattern="^[^<>]+$" name='name' type='text' id="name-of-user"
+                <label for="team">Team</label><input pattern="^[^<>]+$" name='team' type='text' id="team"
+                    class="field-long" placeholder="Type your team name here" required />
+                <label for="username">Name</label><input pattern="^[^<>]+$" name='username' type='text' id="username"
                     class="field-long" placeholder="Type your name here" required />
                 <label for="password">Password</label><input type="password" pattern="^[^<>]+$" name='password' id="password"
                     class="field-long" placeholder="Enter your password here" required />
+                <label for="email">Email</label><input type="email" pattern="^[^<>]+$" name='email' id="email"
+                    class="field-long" placeholder="Enter your email here" required />
                 <button type="submit" class="button-submit">Sign up</button>
             </ul>
         </form>
