@@ -12,6 +12,7 @@ const meetup_url = `https://api.meetup.com/2/open_events?zip=EC1A+4DD&and_text=F
 async function getMeetupApi() {
   try {
     const response = await axios.get(meetup_url);
+    console.log(response.data.results);
     return response.data.results;
   } catch (error) {
     console.error(error);

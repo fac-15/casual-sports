@@ -3,7 +3,7 @@
         <ul class="event-list">
             <h3>Upcoming sports event in London</h3>
             {{#each meetupData}}
-            <li><a class="read-more" href="{{event_url}}">
+            <li><a class="read-more" target="_blank" href="{{event_url}}">
                     {{#if group.group_photo}}
                     <img class="searchTeamPic" src={{group.group_photo.photo_link}} alt="Team picture" />
                     {{else}}
@@ -14,6 +14,7 @@
                 </a>
                 <p>Bio: {{removeTags description}}</p>
                 <p>Number of people attending: {{yes_rsvp_count}}</p>
+                <p>Date: {{numToDate time}}</p>
 
             </li>
             {{/each}}
