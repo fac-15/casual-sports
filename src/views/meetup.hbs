@@ -1,0 +1,15 @@
+<main class="page-content events">
+    <section class="event" id="event">
+        <ul class="event-list">
+            {{#each meetupData}}
+            <li><a class="read-more" href="{{event_url}}">
+                    <h3>{{name}}</h3>
+                    <p>Bio: {{removeTags description}}</p>
+                    <p>Number of people attending: {{yes_rsvp_count}}</p>
+                    <p>Number currently attending: {{headcount}}</p>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>

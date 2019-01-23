@@ -7,6 +7,8 @@ const postEventData = require("../queries/postEventData");
 const postTeamData = require("../queries/postTeamData");
 const { sign, verify } = require('jsonwebtoken');
 const postUser = require("../queries/userSignUp");
+const getMeetupApi = require("../queries/getMeeupApi");
+
 
 router.post("/search", (req, res) => {
   const table = req.body.table;
@@ -57,6 +59,16 @@ router.get("/search/:table/:sport", (request, response) => {
     })
     .catch(err => {
       response.status(404).render("no-results");
+    });
+});
+
+router.get("/meetup", (request, response) => {
+  getMeetupApi()
+    .then(result => {
+      response.render("meetup", { meetupData: result });
+    })
+    .catch(err => {
+      response.status(500).render("500");
     });
 });
 
