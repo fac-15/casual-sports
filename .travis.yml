@@ -6,7 +6,7 @@ before_script:
 env:
   global:
     - "TEST_DB_URL=postgres://test:1234@localhost:5432/travis_ci_test"
-    -"SECRET=SECRET"
+    - "SECRET=SECRET"
     - "MEETUP_KEY=MEETUP_KEY"
     - CODECOV_TOKEN=65e214e6-d134-471c-b66e-fa5341b6f5c0
 install:
