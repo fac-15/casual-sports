@@ -32,12 +32,12 @@ describe("Check that router GET calls return the appropriate status codes", () =
   //     .then(res => {
   //       expect(res.statusCode).toBe(200);
   //     }));
-  // test("GET to /search/events/chess should return status 200", () =>
-  //   supertest(app)
-  //     .get("/search/events/chess")
-  //     .then(res => {
-  //       expect(res.statusCode).toBe(200);
-  //     }));
+  test("GET to /search/events/chess should return status 200", () =>
+    supertest(app)
+      .get("/search/events/chess")
+      .then(res => {
+        expect(res.statusCode).toBe(200);
+      }));
   // test("GET to /search-open/events/rugby should return status 200", () =>
   //   supertest(app)
   //     .get("/search-open/events/rugby")
