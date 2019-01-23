@@ -5,6 +5,7 @@ const locationButton = document.getElementById("locationButton");
 const markerButton = document.getElementById("markerButton");
 
 // ------- postcodeAPI
+// HERE THE PROBLEM --- CAN'T GET VALUE OUT OF HERE AND ACROSS TO MAP API FUNC
 const APILatLong;
 const postcodeAPI = postcode => {
   const request = new XMLHttpRequest();
