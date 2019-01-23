@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "NODE_ENV='test' jest --forceExit --detectOpenHandles --coverage --runInBand",
+    "test": "NODE_ENV='test' jest --detectOpenHandles --coverage --runInBand",
     "start": "node src/index.js",
     "pretest": "eslint --ignore-path .gitignore .",
     "dev": "nodemon src/index.js"
