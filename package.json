@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "NODE_ENV='test' jest --forceExit --detectOpenHandles --coverage --runInBand",
+    "test:coverage": "jest --forceExit --silent --coverage",
     "start": "node src/index.js",
     "pretest": "eslint --ignore-path .gitignore .",
     "dev": "nodemon src/index.js"
