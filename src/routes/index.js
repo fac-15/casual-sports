@@ -28,6 +28,10 @@ router.get("/", (request, response) => {
   response.render("home");
 });
 
+router.get("/map", (request, response) => {
+  response.render("map");
+});
+
 router.get("/search-open/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;

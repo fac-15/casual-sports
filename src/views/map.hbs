@@ -1,0 +1,76 @@
+<p>MAPS PAGE</p>
+
+<button id="locationButton" type="button" name="button">Use my location</button>
+
+<button id="markerButton" type="button" name="button">Add a marker</button>
+
+<div id="map" style="width: 50%; height: 400px; background: grey" />
+
+<script>
+
+// Initialize the platform object:
+var platform = new H.service.Platform({
+'app_id': 's8pUGCqvBEOUVdx36Qfc',
+'app_code': 'PjNmBcpNBmBxaRAlMrnh4g',
+useHTTPS: true
+});
+
+var pixelRatio = window.devicePixelRatio || 1;
+var defaultLayers = platform.createDefaultLayers({
+  tileSize: pixelRatio === 1 ? 256 : 512,
+  ppi: pixelRatio === 1 ? undefined : 320
+});
+
+//Step 2: initialize a map  - not specificing a location will give a whole world view.
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map, {pixelRatio: pixelRatio});
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+const mapToUser = (userLat, userLong) => {
+  map.setCenter({lat:userLat, lng:userLong});
+  map.setZoom(14);
+}
+
+const addMarker = (map) => {
+  var firstMarker = new H.map.Marker({lat:51.567912, lng:-0.108314});
+  map.addObject(firstMarker);
+}
+
+const geoLocate = () => {
+
+  let longVar;
+  let latVar;
+
+  const success = (position) => {
+      console.log("lat is", position.coords.latitude);
+      latVar = position.coords.latitude;
+      console.log("long is", position.coords.longitude);
+      longVar = position.coords.longitude;
+      mapToUser(latVar, longVar);
+    }
+
+  const error = () => {
+      alert("Unable to retrieve your location");
+    }
+
+  navigator.geolocation.getCurrentPosition(success, error);
+
+}
+
+
+const locationButton = document.getElementById('locationButton');
+
+const markerButton = document.getElementById('markerButton');
+
+markerButton.addEventListener("click", addMarker(map));
+
+locationButton.addEventListener("click", geoLocate);
+
+</script>
