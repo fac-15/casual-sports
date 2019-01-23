@@ -9,13 +9,10 @@
                     {{else}}
                     <img class="meetupPic" src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg"
                         alt="Team picture" />
-                    {{/if}}
-                    <h3>{{name}}</h3>
-                </a>
+                    {{/if}} <h4>{{name}}</h4></a>
                 <p>Bio: {{removeTags description}}</p>
-                <p>Number of people attending: {{yes_rsvp_count}}</p>
                 <p>Date: {{numToDate time}}</p>
-
+                <p>People attending: {{yes_rsvp_count}}</p>
             </li>
             {{/each}}
         </ul>
