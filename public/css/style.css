@@ -55,7 +55,6 @@ h3 {
   color: var(--pink);
 }
 
-
 h4 {
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -141,7 +140,7 @@ p {
 
 .active {
   background-color: var(--orange);
-  color:  rgb(70, 68, 68);
+  color: rgb(70, 68, 68);
 }
 
 .topnav .icon {
@@ -389,10 +388,10 @@ textarea {
   float: left;
   width: 40%;
   margin-right: 2%;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 5%;
   padding: 2%;
-  background-color: white;
+  background-color: rgba(70, 68, 68, 0);
 }
 
 /* -------------------team-info page------------------  */
@@ -473,7 +472,7 @@ textarea {
     text-align: right;
     font-size: 1em;
   }
-  
+
   h6 {
     font-size: 1em;
   }
@@ -488,52 +487,50 @@ textarea {
     display: none;
   }
 
-.spread {
-  transform: translate(0) rotate(0);
-}
-
-.spread > div:nth-child(1) {
-  animation-duration: 6.5s;
-  animation-name: slidein;
-  background-color: var(--light-orange);
-  height: 1em;
-  margin: 1em 0 1em 0;
-}
-
-.spread > div:nth-child(2) {
-  animation-duration: 5.5s;
-  animation-name: slidein;
-  background-color: var(--blue);
-  height: 1em;
-  margin: 1em 0 1em 0;
-}
-
-.spread > div:nth-child(3) {
-  animation-duration: 4.5s;
-  animation-name: slidein;
-  background-color: var(--pink);
-  height: 1em;
-  margin: 1em 0 1em 0;
-}
-
-
-@keyframes slidein {
-  from {
-    width: 0%;
+  .spread {
+    transform: translate(0) rotate(0);
   }
 
-  to {
-    width: 100%;
+  .spread > div:nth-child(1) {
+    animation-duration: 6.5s;
+    animation-name: slidein;
+    background-color: var(--light-orange);
+    height: 1em;
+    margin: 1em 0 1em 0;
   }
-}
 
+  .spread > div:nth-child(2) {
+    animation-duration: 5.5s;
+    animation-name: slidein;
+    background-color: var(--blue);
+    height: 1em;
+    margin: 1em 0 1em 0;
+  }
+
+  .spread > div:nth-child(3) {
+    animation-duration: 4.5s;
+    animation-name: slidein;
+    background-color: var(--pink);
+    height: 1em;
+    margin: 1em 0 1em 0;
+  }
+
+  @keyframes slidein {
+    from {
+      width: 0%;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
 
   #add {
     position: relative;
     top: 1em;
     left: 1em;
   }
-  
+
   .button-submit {
     font-size: 0.8em;
   }
@@ -541,5 +538,4 @@ textarea {
   .sort {
     position: relative;
   }
-
 }
