@@ -2,23 +2,6 @@
 
 const locationButton = document.getElementById("locationButton");
 
-const markerButton = document.getElementById("markerButton");
-
-// ------- postcodeAPI
-// HERE THE PROBLEM --- CAN'T GET VALUE OUT OF HERE AND ACROSS TO MAP API FUNC
-// const APILatLong;
-// const postcodeAPI = postcode => {
-//   const request = new XMLHttpRequest();
-//   request.open("GET", `https://api.postcodes.io/postcodes/${postcode}`, true);
-//   request.onload = function() {
-//     const data = JSON.parse(this.response);
-//     APILatLong = data;
-//   };
-//   request.send();
-// };
-// postcodeAPI("N166UZ");
-// console.log("here is api result", data);
-
 // ------- create map
 
 const platform = new H.service.Platform({
@@ -43,25 +26,20 @@ const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
 const ui = H.ui.UI.createDefault(map, defaultLayers);
 
-// -------- send map to user's location
+// -------- send map to given location
 
 const mapToUser = (userLat, userLong) => {
   map.setCenter({ lat: userLat, lng: userLong });
   map.setZoom(14);
 };
-//
-// // --------- add marker to specified location
-// const addMarker = map => {
-//   const firstMarker = new H.map.Marker({ lat: 51.567912, lng: -0.108314 });
-//   map.addObject(firstMarker);
-// };
-//
-// // -------- add a better marker
-//
-const addDomMarker = map => {
-  const outerElement = document.createElement("div"),
+
+// // -------- add a marker
+
+const addDomMarker = (map, lat, long, eventID, sport) => {
+  const outerElement = document.createElement("a"),
     innerElement = document.createElement("div");
 
+  outerElement.href = `/events/${eventID}`;
   outerElement.style.userSelect = "none";
   outerElement.style.webkitUserSelect = "none";
   outerElement.style.msUserSelect = "none";
@@ -87,7 +65,7 @@ const addDomMarker = map => {
   outerElement.appendChild(innerElement);
 
   // Add text to the DOM element
-  innerElement.innerHTML = "Handball";
+  innerElement.innerHTML = sport;
 
   const changeOpacity = evt => {
     evt.target.style.opacity = 0.6;
@@ -97,17 +75,24 @@ const addDomMarker = map => {
     evt.target.style.opacity = 1;
   };
 
-  const hello = e => {
-    alert("You clicked the " + innerElement.innerHTML + " event");
+  const clickForMore = evt => {
+    evt.target.innerHTML = "Click to see event";
   };
+
+  const hoverOff = evt => {
+    evt.target.innerHTML = sport;
+  };
+  // const hello = e => {
+  //   alert("You clicked the " + innerElement.innerHTML + " event");
+  // };
 
   //create dom icon and add/remove opacity listeners
   const domIcon = new H.map.DomIcon(outerElement, {
     // the function is called every time marker enters the viewport
     onAttach: function(clonedElement, domIcon, domMarker) {
-      clonedElement.addEventListener("mouseover", changeOpacity);
-      clonedElement.addEventListener("mouseout", changeOpacityToOne);
-      clonedElement.addEventListener("click", hello);
+      clonedElement.addEventListener("mouseover", clickForMore);
+      clonedElement.addEventListener("mouseout", hoverOff);
+      // clonedElement.addEventListener("click", hello);
     },
     // the function is called every time marker leaves the viewport
     onDetach: function(clonedElement, domIcon, domMarker) {
@@ -118,7 +103,7 @@ const addDomMarker = map => {
   console.log("hellooooo");
   // Marker for Chicago Bears home
   const bearsMarker = new H.map.DomMarker(
-    { lat: 51.567193, lng: -0.071881 },
+    { lat: lat, lng: long },
     {
       icon: domIcon
     }
@@ -143,4 +128,35 @@ const geoLocate = () => {
 
 locationButton.addEventListener("click", geoLocate);
 
-markerButton.addEventListener("click", addDomMarker(map));
+const postcodeAPI = item => {
+  const request = new XMLHttpRequest();
+
+  request.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      const giz = JSON.parse(this.responseText);
+      console.log("this item is", item.name);
+      addDomMarker(
+        map,
+        giz.result.latitude,
+        giz.result.longitude,
+        item.id,
+        item.sport
+      );
+    }
+  };
+
+  request.open("GET", `https://api.postcodes.io/postcodes/${item.location}`);
+  request.send();
+};
+
+const eventsData = JSON.parse(document.getElementById("eventsData").innerHTML);
+console.log(eventsData);
+
+const addAllMarkers = array => {
+  array.forEach(item => {
+    postcodeAPI(item);
+  });
+};
+
+// ------ Execute addAllMarkers
+addAllMarkers(eventsData);
