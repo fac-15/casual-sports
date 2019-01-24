@@ -6,18 +6,18 @@ const markerButton = document.getElementById("markerButton");
 
 // ------- postcodeAPI
 // HERE THE PROBLEM --- CAN'T GET VALUE OUT OF HERE AND ACROSS TO MAP API FUNC
-const APILatLong;
-const postcodeAPI = postcode => {
-  const request = new XMLHttpRequest();
-  request.open("GET", `https://api.postcodes.io/postcodes/${postcode}`, true);
-  request.onload = function() {
-    const data = JSON.parse(this.response);
-    APILatLong = data;
-  };
-  request.send();
-};
-postcodeAPI("N166UZ");
-console.log("here is api result", data);
+// const APILatLong;
+// const postcodeAPI = postcode => {
+//   const request = new XMLHttpRequest();
+//   request.open("GET", `https://api.postcodes.io/postcodes/${postcode}`, true);
+//   request.onload = function() {
+//     const data = JSON.parse(this.response);
+//     APILatLong = data;
+//   };
+//   request.send();
+// };
+// postcodeAPI("N166UZ");
+// console.log("here is api result", data);
 
 // ------- create map
 
@@ -49,15 +49,15 @@ const mapToUser = (userLat, userLong) => {
   map.setCenter({ lat: userLat, lng: userLong });
   map.setZoom(14);
 };
-
-// --------- add marker to specified location
-const addMarker = map => {
-  const firstMarker = new H.map.Marker({ lat: 51.567912, lng: -0.108314 });
-  map.addObject(firstMarker);
-};
-
-// -------- add a better marker
-
+//
+// // --------- add marker to specified location
+// const addMarker = map => {
+//   const firstMarker = new H.map.Marker({ lat: 51.567912, lng: -0.108314 });
+//   map.addObject(firstMarker);
+// };
+//
+// // -------- add a better marker
+//
 const addDomMarker = map => {
   console.log("HELLLO", APILatLong);
   const outerElement = document.createElement("div"),
@@ -118,7 +118,7 @@ const addDomMarker = map => {
   });
   // Marker for Chicago Bears home
   const bearsMarker = new H.map.DomMarker(
-    { lat: APILatLong.lat, lng: APILatLong.long },
+    { lat: 51.567193, lng: -0.071881 },
     {
       icon: domIcon
     }
@@ -126,8 +126,6 @@ const addDomMarker = map => {
 
   map.addObject(bearsMarker);
 };
-
-addDomMarker(map);
 // --------- geolocation function
 
 const geoLocate = () => {
@@ -143,6 +141,6 @@ const geoLocate = () => {
   navigator.geolocation.getCurrentPosition(success, error);
 };
 
-// markerButton.addEventListener("click", addDomMarker(map));
+markerButton.addEventListener("click", addDomMarker(map));
 
 locationButton.addEventListener("click", geoLocate());
