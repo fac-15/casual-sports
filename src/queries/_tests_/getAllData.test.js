@@ -11,10 +11,10 @@ expect(getAllData.getTableData("teams")).resolves.toEqual(teams)
 );
 
 test("the function fails with an error", () => 
-   expect(getAllData.getTableData("blfojffoifjoffoif")).toBe.rejected
-  );
+   expect(getAllData.getTableData("err")).toBe.rejected
+);
 
 
   test("the function fails with an error", () => 
-  expect(getAllData.searchSport("blfojffoifjoffoif")).toBe.rejected
- );
+   expect(getAllData.searchSport("err")).toBe.rejected
+  );
