@@ -40,6 +40,17 @@ router.get("/", (request, response) => {
     });
 });
 
+router.get("/map", (request, response) => {
+  getAllData
+    .getTableData("events")
+    .then(result => {
+      response.render("map", { eventsData: JSON.stringify(result.reverse()) });
+    })
+    .catch(err => {
+      response.status(500).render("500");
+    });
+});
+
 router.get("/search-open/:table/:sport", (request, response) => {
   const searchInput = request.params.sport;
   const table = request.params.table;

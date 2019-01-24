@@ -382,6 +382,27 @@ textarea {
   margin-right: 2%;
 }
 
+/*--------------------map page-----------  */
+
+#eventsData {
+  display: none;
+}
+
+#mapTitle {
+  margin: 20px auto;
+}
+
+#locationButton {
+  margin: 30px auto;
+}
+
+#map {
+  margin: 50px auto;
+  width: 50%;
+  background: grey;
+  height: 400px;
+}
+
 /*---------------------  meetup pic ----------------- */
 
 .meetupPic {
@@ -537,5 +558,8 @@ textarea {
 
   .sort {
     position: relative;
+  }
+  #map {
+    width: 90%;
   }
 }
