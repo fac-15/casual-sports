@@ -12,15 +12,16 @@
 
         <ul class="event-list">
             {{#each eventsData}}
-             <li><a class="read-more" href="/events/{{id}}">
-            <img class="searchTeamPic" src={{image}} alt="Event picture">
-                    <h3>{{name}}</h3></a>
-                    <h5>We're playing: {{sport}}</h5>
-                    <h5>Open for walk-in participants: {{yesOrNo open}}</h5>
-                    <h5>Genders: {{genders genders}}</h5>
-                    <h5>Location: {{location}}</h5>
-                     <h5>Date & Time: {{event_date}},  {{start_time}}</h5>
-                </li>
+            <li><a class="read-more" href="/events/{{id}}">
+                    <img class="searchTeamPic" src={{image}} alt="Event picture">
+                    <h3>{{name}}</h3>
+                </a>
+                <h5>We're playing: {{sport}}</h5>
+                <h5>Open for walk-in participants: {{yesOrNo open}}</h5>
+                <h5>Genders: {{genders genders}}</h5>
+                <h5>Location: {{location}}</h5>
+                <h5>Date & Time: {{event_date}}, {{start_time}}</h5>
+            </li>
             {{/each}}
         </ul>
     </section>
