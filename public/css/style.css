@@ -406,11 +406,19 @@ textarea {
 #noResultsGifR {
   float: right;
   max-width: 15%;
+  margin: 1em 1em 1em 1em;
 }
 
 #noResultsGifL {
   float: left;
   max-width: 15%;
+  margin: 1em 1em 1em 1em;
+}
+
+#noResultsUl {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 /* ---------------- media queries --------------- */
