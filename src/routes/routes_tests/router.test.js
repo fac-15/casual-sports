@@ -59,6 +59,19 @@ describe("Check that router GET calls return the appropriate status codes", () =
         expect(res.statusCode).toBe(200);
       }));
 
+  test("GET to /login should return status 200", () =>
+    supertest(app)
+      .get("/login")
+      .then(res => {
+        expect(res.statusCode).toBe(200);
+      }));
+
+  test("GET to /sign-up should return status 200", () =>
+    supertest(app)
+      .get("/sign-up")
+      .then(res => {
+        expect(res.statusCode).toBe(200);
+      }));
   // test("GET to /add-event should return status 200", () =>
   //   supertest(app)
   //     .get("/add-event")

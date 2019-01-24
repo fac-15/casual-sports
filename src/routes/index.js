@@ -156,7 +156,7 @@ router.post("/teams/alpha/", (request, response) => {
         const textB = b.name.toUpperCase();
         return textA < textB ? -1 : textA > textB ? 1 : 0;
       });
-      response.render("teams", { teamsData: result });
+      response.status(200).render("teams", { teamsData: result });
     })
     .catch(err => {
       response.status(500).render("500");
@@ -167,7 +167,7 @@ router.get("/events/:id", (req, res) => {
   getOneEvent(req.params.id)
     .then(result => {
       const rest = result[0];
-      res.render("event-info", { eventInfo: rest });
+      res.status(200).render("event-info", { eventInfo: rest });
     })
     .catch(err => {
       res.status(500).render("500");
@@ -178,7 +178,7 @@ router.get("/teams/:id", (req, res) => {
   getOneTeam(req.params.id)
     .then(result => {
       const rest = result[0];
-      res.render("team-info", { teamData: rest });
+      res.status(200).render("team-info", { teamData: rest });
     })
     .catch(err => {
       res.status(404).render("404");
@@ -190,7 +190,7 @@ router.get("/new-event", (req, res) => {
 });
 
 router.get("/sign-up", (req, res) => {
-  res.render("sign-up");
+  res.status(200).render("sign-up");
 });
 
 router.post("/sign-up", (req, res) => {
