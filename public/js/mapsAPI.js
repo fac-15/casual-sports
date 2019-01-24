@@ -89,13 +89,13 @@ const addDomMarker = (map, lat, long, eventID, sport) => {
   //create dom icon and add/remove opacity listeners
   const domIcon = new H.map.DomIcon(outerElement, {
     // the function is called every time marker enters the viewport
-    onAttach: function(clonedElement, domIcon, domMarker) {
+    onAttach: (clonedElement, domIcon, domMarker) => {
       clonedElement.addEventListener("mouseover", clickForMore);
       clonedElement.addEventListener("mouseout", hoverOff);
       // clonedElement.addEventListener("click", hello);
     },
     // the function is called every time marker leaves the viewport
-    onDetach: function(clonedElement, domIcon, domMarker) {
+    onDetach: (clonedElement, domIcon, domMarker) => {
       clonedElement.removeEventListener("mouseover", changeOpacity);
       clonedElement.removeEventListener("mouseout", changeOpacityToOne);
     }
@@ -103,7 +103,7 @@ const addDomMarker = (map, lat, long, eventID, sport) => {
   console.log("hellooooo");
   // Marker for Chicago Bears home
   const bearsMarker = new H.map.DomMarker(
-    { lat: lat, lng: long },
+    { lat, lng: long },
     {
       icon: domIcon
     }
