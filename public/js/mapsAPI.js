@@ -59,7 +59,6 @@ const mapToUser = (userLat, userLong) => {
 // // -------- add a better marker
 //
 const addDomMarker = map => {
-  console.log("HELLLO", APILatLong);
   const outerElement = document.createElement("div"),
     innerElement = document.createElement("div");
 
@@ -116,6 +115,7 @@ const addDomMarker = map => {
       clonedElement.removeEventListener("mouseout", changeOpacityToOne);
     }
   });
+  console.log("hellooooo");
   // Marker for Chicago Bears home
   const bearsMarker = new H.map.DomMarker(
     { lat: 51.567193, lng: -0.071881 },
@@ -141,6 +141,6 @@ const geoLocate = () => {
   navigator.geolocation.getCurrentPosition(success, error);
 };
 
-markerButton.addEventListener("click", addDomMarker(map));
+locationButton.addEventListener("click", geoLocate);
 
-locationButton.addEventListener("click", geoLocate());
+markerButton.addEventListener("click", addDomMarker(map));
