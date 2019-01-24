@@ -1,4 +1,4 @@
-const numToAge = (num) => {
+const numToAge = num => {
   let ageRange;
   if (num === 1) {
     ageRange = "18-21";
@@ -12,6 +12,6 @@ const numToAge = (num) => {
     ageRange = "Invalid input";
   }
   return ageRange;
-}
+};
 
 module.exports = numToAge;

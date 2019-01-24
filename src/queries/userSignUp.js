@@ -1,22 +1,35 @@
 const databaseConnection = require("../db/db_connection");
-const hashPassword = require("/hash.js");
+const bcrypt = require("bcryptjs");
 
-const postDataUser = (username, password, email) =>
-  new Promise((resolve, reject) => {
-    hashPassword(password, (err, hashedPassword) => {
+
+const hashPassword = (password, cb) => {
+  bcrypt.genSalt(10, (err, salt) => {
+    if (err) {
+      callback(err);
+    } else {
+      bcrypt.hash(password, salt, cb);
+    }
+  });
+};
+
+
+const postDataUser = (team, username, password, email, cb) => {
+  hashPassword(password, (err, hashedPassword) => {
       if (err) console.log(err);
       databaseConnection.query(
-        "INSERT INTO users (username, password, email) VALUES ($1, $2, $3)",
-        [username, hashedPassword, email],
-        (err, res) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(res.rows);
-          }
-        }
-      );
-    });
-  });
+          'INSERT INTO users (team, username, password, email) VALUES ($1, $2, $3, $4)',
+          [team, username, hashedPassword, email],
+          (error, res) => {
+              if(err) cb(error);
+               else cb(null, res);
+              }
+            )
+        });
+    };       
 
-module.exports = postDataUser;
+
+module.exports = {
+  postDataUser,
+  hashPassword
+};
+

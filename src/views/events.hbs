@@ -3,19 +3,25 @@
         <button onclick="location.href='/add-event'" class="button-submit" id="add">Add your own
             event</button>
         <h3>Sort by:</h3>
-        <form class="sort-form" action="/events/alpha/" method="post">
-            <button type='submit' class="sort button-submit">Alphabetically</button>
-        </form>
         <form action="/events/date/" method="post">
             <button type='submit' class="sort button-submit">Date</button>
         </form>
+        <form class="sort-form" action="/events/alpha/" method="post">
+            <button type='submit' class="sort button-submit">Alphabetically</button>
+        </form>
+
         <ul class="event-list">
             {{#each eventsData}}
-             <li><a class="read-more" href="/events/{{id}}">
-            <img class="searchTeamPic" src={{image}} alt="Event picture">
-                    <h3>{{name}}</h3></a>
-                    <p>Open for walk-in participants:</p>{{yesOrNo open}}
-                </li>
+            <li><a class="read-more" href="/events/{{id}}">
+                    <img class="searchTeamPic" src={{image}} alt="Event picture">
+                    <h3>{{name}}</h3>
+                </a>
+                <h5>We're playing: {{sport}}</h5>
+                <h5>Open for walk-in participants: {{yesOrNo open}}</h5>
+                <h5>Genders: {{genders genders}}</h5>
+                <h5>Location: {{location}}</h5>
+                <h5>Date & Time: {{event_date}}, {{start_time}}</h5>
+            </li>
             {{/each}}
         </ul>
     </section>

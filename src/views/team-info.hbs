@@ -1,16 +1,17 @@
 <main class="page-content error-pages">
     <section class="404" id="404">
         <ul class="event-list">
-                    <li><h3>{{teamData.name}}</h3>
-                      <img class="teamInfoPic" src={{teamData.image}} alt="Team picture">
-            <p>Location:</p> {{teamData.location}}
-            <p>Sport:</p> {{teamData.sport}}
-            <p>Bio:</p> {{teamData.bio}}
-           <p>How many members:</p> {{teamData.size}}
-           <p>Genders:</p> {{genders teamData.genders}}
-           <p>Age range:</p> {{ageRange teamData.ages}}
-           <p>Skill level:</p> {{skillz teamData.skill}}
-           <p>Looking for more members:</p> {{yesOrNo teamData.solo}}
+            <li>
+                <h3>{{teamData.name}}</h3>
+                <img class="teamInfoPic" src={{teamData.image}} alt="Team picture">
+                <h6>Location: {{teamData.location}}</h6>
+                <h6>Sport: {{teamData.sport}}</h6>
+                <h6>Bio: {{teamData.bio}}</h6>
+                <h6>How many members: {{teamData.size}}</h6>
+                <h6>Genders: {{genders teamData.genders}}</h6>
+                <h6>Age range: {{ageRange teamData.ages}}</h6>
+                <h6>Skill level: {{skillz teamData.skill}}</h6>
+                <h6>Looking for more members: {{yesOrNo teamData.solo}}</h6>
         </ul>
     </section>
 </main>

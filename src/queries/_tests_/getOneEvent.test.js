@@ -1,21 +1,19 @@
 const getOneEvent = require("../getOneEvent");
-const dbBuild = require("../../db/db_build.js");
+const refresh = require("../../db/build.js");
 const { event } = require("./test_fixtures");
 
-// const error = "error: invalid input syntax for integer: \"potatoes\"";
-
 test("the function returns the data in the event with the id of 1", () => {
-  dbBuild((error, response) => {
+  refresh.refresh((error, response) => {
     if (error) return console.log("ERROR IN DBBUILD: " + error);
     expect.assertions(1);
     return expect(getOneEvent(1)).resolves.toEqual(event);
   });
 });
 
-// test("the fetch fails with an error", () => {
-//   dbBuild(function(error, response) {
-//     if (error) return console.log("ERROR IN DBBUILD: " + error);
-//     expect.assertions(1);
-//     return expect(getOneEvent("potatoes")).rejects.toMatch(error);
-//   });
-// });
+test("the fetch fails with an error", () => {
+  refresh.refresh((error, response) => {
+    if (error) return console.log("ERROR IN DBBUILD: " + error);
+    expect.assertions(1);
+    return expect(getOneEvent("potatoes")).rejects.toMatch(error);
+  });
+});

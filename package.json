@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "NODE_ENV='test' jest --forceExit --detectOpenHandles --coverage --runInBand",
+    "test:coverage": "jest --forceExit --silent --coverage",
     "start": "node src/index.js",
     "pretest": "eslint --ignore-path .gitignore .",
     "dev": "nodemon src/index.js"
@@ -33,10 +34,13 @@
     "supertest": "^3.3.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dateformat": "^3.0.3",
     "env2": "^2.2.2",
     "eslint": "^5.12.0",
     "eslint-config-node": "^4.0.0",
@@ -47,6 +51,7 @@
     "fs": "0.0.1-security",
     "handlebars-helpers": "^0.10.0",
     "i": "^0.3.6",
+    "jsonwebtoken": "^8.4.0",
     "npm": "^6.6.0",
     "pg": "^7.8.0",
     "pg-promise": "^8.5.4",
