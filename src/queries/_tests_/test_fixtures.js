@@ -27,6 +27,15 @@ text_fixtures = {
       user_id: 1
     }
   ],
+  user: [
+    {
+      email: "charlie@gmail.com",
+      id: 2,
+      password: "ilovefootball",
+      team: "footy",
+      username: "charlie"
+    }
+  ],
   events: [
     {
       event_date: "2019-03-09",

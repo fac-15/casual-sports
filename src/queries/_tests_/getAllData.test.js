@@ -2,8 +2,8 @@ const getAllData = require("../getAllData");
 const { refresh } = require("../../db/build.js");
 const { events, teams } = require("./test_fixtures");
 
-describe("getTableData returns all events", () => {
-  test(`Assert that you can click the profile tab`, async done => {
+describe("testing getTableData", () => {
+  test(`getTableData returns all events`, async done => {
     await refresh();
     expect(getAllData.getTableData("events")).resolves.toEqual(events);
     done();
@@ -11,7 +11,7 @@ describe("getTableData returns all events", () => {
 });
 
 describe("getTableData returns all teams", () => {
-  test(`Assert that you can click the profile tab`, async done => {
+  test(`getTableData returns all events`, async done => {
     await refresh();
     expect(getAllData.getTableData("teams")).resolves.toEqual(teams);
     done();
