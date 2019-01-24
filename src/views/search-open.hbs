@@ -2,29 +2,29 @@
     <section class="event" id="event">
 
         <ul class="event-list">
-                {{#each sportsData}}
-                {{#if solo}}
-                <li><a class="read-more" href="/teams/{{id}}">
-                <img class="searchTeamPic" src={{image}} alt="">
-                <h3>{{name}}</h3>
-                <h5>We're playing: {{sport}}</h5>
-                <h5>Location: {{location}}</h5>
-                <h5>Gender: {{genders genders}}</h5>
-                <h5>Age Range: {{ageRange ages}}</h5>
-                <h5>Looking for team mates: {{yesOrNo solo}}</h5>
+            {{#each sportsData}}
+            {{#if solo}}
+            <li><a class="read-more" href="/teams/{{id}}">
+                    <img class="searchTeamPic" src={{image}} alt="">
+                    <h3>{{name}}</h3>
+                    <h5>We're playing: {{sport}}</h5>
+                    <h5>Location: {{location}}</h5>
+                    <h5>Gender: {{genders genders}}</h5>
+                    <h5>Age Range: {{ageRange ages}}</h5>
+                    <h5>Looking for team mates: {{yesOrNo solo}}</h5>
                 </a></li>
-                 {{else}}
-                  {{#if open}}
-                  <li><a class="read-more" href="/events/{{id}}">
-                          <img class="searchTeamPic" src={{image}} alt="">
-                          <h3>{{name}}</h3>
-                          <h5>Date & Time: {{reverseDate event_date}} {{start_time}}</h5>
-                          <h5>Sport: {{sport}}</h5>
-                          <h5>Location: {{location}}</h5>
-                          <h5>Open for walk-in participants: {{yesOrNo open}}</h5>
-                      </a></li>
-                {{/if}}
-                {{/if}}
+            {{else}}
+            {{#if open}}
+            <li><a class="read-more" href="/events/{{id}}">
+                    <img class="searchTeamPic" src={{image}} alt="">
+                    <h3>{{name}}</h3>
+                    <h5>Date & Time: {{reverseDate event_date}} {{start_time}}</h5>
+                    <h5>Sport: {{sport}}</h5>
+                    <h5>Location: {{location}}</h5>
+                    <h5>Open for walk-in participants: {{yesOrNo open}}</h5>
+                </a></li>
+            {{/if}}
+            {{/if}}
             {{/each}}
         </ul>
     </section>
