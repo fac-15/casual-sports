@@ -1,21 +1,11 @@
 const getOneTeam = require("../getOneTeam");
-const refresh = require("../../db/build.js");
-const { team } = require("./test_fixtures");
+const { refresh } = require("../../db/build.js");
+const { team, error } = require("./test_fixtures");
 
-test("Testing results for team id 1", () => {
-  refresh.refresh((error, response) => {
-    if (error) return console.log("ERROR IN DBBUILD: " + error);
-    return expect(getOneTeam(1)).resolves.toEqual(team);
-  });
-});
-
-test("Testing invalid input returns false", () => {
-  refresh.refresh((error, response) => {
-    if (error) return console.log("ERROR IN DBBUILD: " + error);
-    return getOneTeam("sdfkgjndfkjg").catch(e =>
-      expect(e).toEqual(
-        'error: invalid input syntax for integer: "sdfkgjndfkjg"'
-      )
-    );
-  });
+describe("getOneEvent returns the data in the event with the id of 1", () => {
+  test(`Assert that you can click the profile tab`, async done => {
+    await refresh();
+    expect(getOneTeam(1)).resolves.toEqual(team);
+    done();
+  }, 30000);
 });
