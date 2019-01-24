@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 describe("Check that router GET calls return the appropriate status codes", () => {
   test("GET to home should return status 200", done => {
-    expect.assertions(1);
+    //expect.assertions(1);
     supertest(app)
       .get("/")
       .then(res => {
@@ -44,18 +44,33 @@ describe("Check that router GET calls return the appropriate status codes", () =
   //     .then(res => {
   //       expect(res.statusCode).toBe(200);
   //     }));
-  test("GET to /add-event should return status 200", () =>
-    supertest(app)
-      .get("/add-event")
-      .then(res => {
-        expect(res.statusCode).toBe(200);
-      }));
-  test("GET to /add-team should return status 200", () =>
-    supertest(app)
-      .get("/add-team")
-      .then(res => {
-        expect(res.statusCode).toBe(200);
-      }));
+
+  // test("GET to /events should return status 200", () =>
+  //   supertest(app)
+  //     .get("/events")
+  //     .then(res => {
+  //       expect(res.statusCode).toBe(200);
+  //     }));
+
+  // test("GET to /teams should return status 200", () =>
+  //   supertest(app)
+  //     .get("/teams")
+  //     .then(res => {
+  //       expect(res.statusCode).toBe(200);
+  //     }));
+
+  // test("GET to /add-event should return status 200", () =>
+  //   supertest(app)
+  //     .get("/add-event")
+  //     .then(res => {
+  //       expect(res.statusCode).toBe(200);
+  //     }));
+  // test("GET to /add-team should return status 200", () =>
+  //   supertest(app)
+  //     .get("/add-team")
+  //     .then(res => {
+  //       expect(res.statusCode).toBe(200);
+  //     }));
 });
 
 // describe("Check that making a GET request to a specific team id returns the correct team", () => {

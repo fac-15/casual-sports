@@ -4,5 +4,6 @@ module.exports = {
   ageRange: require("./num-to-age"),
   yesOrNo: require("./boolean-to-string"),
   reverseDate: require("./reverse-date.js"),
-  sortDate: require("./sort-date.js")
+  removeTags: require("./remove-tags.js"),
+  numToDate: require("./num-to-date.js")
 };
