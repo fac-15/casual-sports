@@ -1,11 +1,11 @@
-const getOneTeam = require("../getOneTeam");
+const getUniqueSports = require("../getUniqueSports");
 const { refresh } = require("../../db/build.js");
-const { team } = require("./test_fixtures");
+const { sports } = require("./test_fixtures");
 
 describe("getOneEvent returns the data in the event with the id of 1", () => {
   test(`Assert that you can click the profile tab`, async done => {
     await refresh();
-    expect(getOneTeam(1)).resolves.toEqual(team);
+    expect(getUniqueSports()).resolves.toEqual(sports);
     done();
   }, 30000);
 });

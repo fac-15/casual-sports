@@ -1,10 +1,38 @@
 text_fixtures = {
-  error: [`invalid input syntax for integer: "potatos"`],
+  sports: [
+    { sport: "water polo" },
+    { sport: "football" },
+    { sport: "Football" },
+    { sport: "rugby" }
+  ],
+  user: [
+    {
+      email: "charlie@gmail.com",
+      id: 2,
+      password: "ilovefootball",
+      team: "footy",
+      username: "charlie"
+    }
+  ],
   event: [
     {
       event_date: "2019-03-09",
       genders: 3,
       id: 1,
+      location: "london",
+      name: "fun at the park",
+      open: true,
+      sport: "Football",
+      start_time: "12:00",
+      users_id: 1
+    }
+  ],
+  postEvent: [
+    {
+      event_date: "2019-03-09",
+      genders: 3,
+      id: 1,
+      description: "bla bla",
       location: "london",
       name: "fun at the park",
       open: true,
