@@ -31,6 +31,10 @@ And to run tests:
 
 **Team Leader**: As a user, I want to be able to add my team to the site, to see different opponents for my team, and to find new members for my team.
 
+## Prototyping
+
+<img width="200" alt="1" src="https://user-images.githubusercontent.com/16784959/51672526-9a573100-1fc3-11e9-9996-e443695298f4.png"><img width="200" alt="2" src="https://user-images.githubusercontent.com/16784959/51672530-9cb98b00-1fc3-11e9-943d-91b810a51dee.png"><img width="200" alt="3" src="https://user-images.githubusercontent.com/16784959/51672540-9e834e80-1fc3-11e9-8398-3269026b9ee9.png"><img width="200" alt="4" src="https://user-images.githubusercontent.com/16784959/51672543-a17e3f00-1fc3-11e9-9fa6-c048f4045567.png">
+
 ## User stories, Week 1 :full_moon_with_face: 
 
 As a user, I can:
@@ -49,11 +53,11 @@ As a user, I can:
 
 ## Current Stretch Goals :100: :grimacing: 
 
-1. [ ] Use **login authentication** for users, team leaders and event admins.
+1. [x] Use **login authentication** for users, team leaders and event admins.
 
-2. [ ] Display search results on an **interactive map**!
+2. [x] Use the **Meetup.com API** and allow the user to also discover sports events on Meetup. 
 
-3. [ ] Use the **Meetup.com API** and allow the user to also discover sports events on Meetup. 
+3. [ ] Display search results on an **interactive map**!
 
 
 ## Contributing
