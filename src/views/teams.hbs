@@ -9,15 +9,16 @@
         <ul class="event-list">
             {{#each teamsData}}
             <li><a class="read-more" href="/teams/{{id}}">
-                     <img class="searchTeamPic" src={{image}} alt="Team picture">
-                    <h3>{{name}}</h2></a>
-                    <h5>We're playing: {{sport}}</h5> 
-                    <h5>Based in: {{location}}</h5>
-                    <h5>Genders: {{genders genders}}</h5>
-                    <h5>Skill level: {{skillz skill}}</h5>
-                    <h5>Age Range: {{ageRange ages}}</h5>
-                    <h5>Looking for team mates: {{yesOrNo solo}}</h5>
-                </li>
+                    <img class="searchTeamPic" src={{image}} alt="Team picture">
+                    <h3>{{name}}</h2>
+                </a>
+                <h5>We're playing: {{sport}}</h5>
+                <h5>Based in: {{location}}</h5>
+                <h5>Genders: {{genders genders}}</h5>
+                <h5>Skill level: {{skillz skill}}</h5>
+                <h5>Age Range: {{ageRange ages}}</h5>
+                <h5>Looking for team mates: {{yesOrNo solo}}</h5>
+            </li>
             {{/each}}
         </ul>
     </section>

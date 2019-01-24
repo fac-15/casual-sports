@@ -25,7 +25,7 @@ h1 {
 }
 
 h1:hover {
-  color: black;
+  color: rgb(70, 68, 68);
 }
 
 .logo {
@@ -43,6 +43,7 @@ h2 {
   text-align: center;
   font-family: "Knewave", cursive;
   color: var(--light-orange);
+  text-shadow: 0.01em 0.01em black;
 }
 
 h3 {
@@ -134,12 +135,12 @@ p {
 
 .topnav a:hover {
   background-color: var(--grey);
-  color: rgb(0, 26, 51);
+  color: rgb(70, 68, 68);
 }
 
 .active {
   background-color: var(--orange);
-  color: rgb(0, 26, 51);
+  color: rgb(70, 68, 68);
 }
 
 .topnav .icon {
@@ -405,10 +406,10 @@ textarea {
   float: left;
   width: 40%;
   margin-right: 2%;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 5%;
   padding: 2%;
-  background-color: white;
+  background-color: rgba(70, 68, 68, 0);
 }
 
 /* -------------------team-info page------------------  */
@@ -423,11 +424,19 @@ textarea {
 #noResultsGifR {
   float: right;
   max-width: 15%;
+  margin: 1em 1em 1em 1em;
 }
 
 #noResultsGifL {
   float: left;
   max-width: 15%;
+  margin: 1em 1em 1em 1em;
+}
+
+#noResultsUl {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 /* ---------------- media queries --------------- */
