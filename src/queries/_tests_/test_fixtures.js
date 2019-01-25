@@ -752,7 +752,163 @@ text_fixtures = {
       sport: "checkers",
       user_id: 4
     }
+  ],
+
+  football: [
+    {
+      event_date: "2019-07-17",
+      genders: 4,
+      id: 29,
+      location: "Lékoni",
+      name: "Lotlux",
+      open: false,
+      sport: "football",
+      start_time: "13:30",
+      users_id: 87
+    },
+    {
+      event_date: "2019-07-14",
+      genders: 1,
+      id: 28,
+      location: "Baihe",
+      name: "Regrant",
+      open: true,
+      sport: "football",
+      start_time: "16:00",
+      users_id: 5
+    },
+    {
+      event_date: "2019-07-09",
+      genders: 1,
+      id: 27,
+      location: "Yaguachi Nuevo",
+      name: "Opela",
+      open: false,
+      sport: "football",
+      start_time: "15:00",
+      users_id: 84
+    },
+    {
+      event_date: "2019-06-07",
+      genders: 4,
+      id: 26,
+      location: "Baoshan",
+      name: "Alphazap",
+      open: false,
+      sport: "football",
+      start_time: "12:00",
+      users_id: 71
+    },
+    {
+      event_date: "2019-06-26",
+      genders: 4,
+      id: 23,
+      location: "Woloara",
+      name: "Subin",
+      open: true,
+      sport: "football",
+      start_time: "12:30",
+      users_id: 56
+    },
+    {
+      event_date: "2019-06-24",
+      genders: 2,
+      id: 22,
+      location: "Dushu",
+      name: "Fixflex",
+      open: false,
+      sport: "football",
+      start_time: "13:00",
+      users_id: 82
+    },
+    {
+      event_date: "2019-06-14",
+      genders: 1,
+      id: 20,
+      location: "Guarapuava",
+      name: "Hatity",
+      open: true,
+      sport: "football",
+      start_time: "18:00",
+      users_id: 90
+    },
+    {
+      event_date: "2019-06-10",
+      genders: 1,
+      id: 19,
+      location: "Teminabuan",
+      name: "Gembucket",
+      open: true,
+      sport: "football",
+      start_time: "19:00",
+      users_id: 54
+    },
+    {
+      event_date: "2019-06-02",
+      genders: 4,
+      id: 16,
+      location: "Piancheng",
+      name: "Zaam-Dox",
+      open: true,
+      sport: "football",
+      start_time: "18:00",
+      users_id: 24
+    },
+    {
+      event_date: "2019-05-18",
+      genders: 3,
+      id: 11,
+      location: "Spasskoye-Lutovinovo",
+      name: "Biodex",
+      open: false,
+      sport: "football",
+      start_time: "16:00",
+      users_id: 56
+    },
+    {
+      event_date: "2019-05-08",
+      genders: 2,
+      id: 8,
+      location: "Dagar",
+      name: "Stim",
+      open: false,
+      sport: "football",
+      start_time: "12:00",
+      users_id: 35
+    },
+    {
+      event_date: "2019-04-20",
+      genders: 4,
+      id: 4,
+      location: "Gandapura",
+      name: "Span",
+      open: true,
+      sport: "football",
+      start_time: "14:00",
+      users_id: 88
+    },
+    {
+      event_date: "2019-04-17",
+      genders: 4,
+      id: 3,
+      location: "Trzcinica",
+      name: "Cardguard",
+      open: true,
+      sport: "football",
+      start_time: "10:00",
+      users_id: 93
+    },
+    {
+      event_date: "2019-03-11",
+      genders: 4,
+      id: 2,
+      location: "Kizhinga",
+      name: "Zontrax",
+      open: false,
+      sport: "football",
+      start_time: "09:00",
+      users_id: 72
+    }
   ]
 };
-
 module.exports = text_fixtures;
