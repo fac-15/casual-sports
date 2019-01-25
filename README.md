@@ -57,7 +57,7 @@ As a user, I can:
 
 2. [x] Use the **Meetup.com API** and allow the user to also discover sports events on Meetup.
 
-3. [ ] Display search results on an **interactive map**!
+3. [x] Display search results on an **interactive map**!
 
 ## Contributing
 
